@@ -3,1176 +3,959 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Monil Raval | Operations & Digital Transformation Leader</title>
+<title>Monil Raval | Product Owner & Operations Professional</title>
+<meta name="description" content="Monil Raval — Product Owner, Operations & Digital Transformation professional. Based in Kaufbeuren, Bavaria. MBA + MSc IT. Amazon, AGCO, Bosch experience."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0a0a0a;--muted:#6b6b6b;--line:#e0ddd8;
-  --accent:#c8a96e;--accent2:#7c6aff;
+  --ink:#0a0a0a;--muted:#5c5c5c;--line:#e0ddd8;
+  --accent:#c8a96e;--accent2:#4f6ef7;
   --bg:#f8f7f3;--card:#f0efe9;--white:#fff;--dark:#0d0d12;
+  --green:#1a7f4b;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 5vw;background:rgba(248,247,243,0.96);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);}
-.nav-logo{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--ink);text-decoration:none;cursor:pointer;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:1rem 5vw;background:rgba(248,247,243,0.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--ink);text-decoration:none;cursor:pointer;letter-spacing:0.01em;}
 .nav-links{display:flex;gap:0;list-style:none;}
-.nav-links li a{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:0.4rem 1rem;transition:color 0.2s;cursor:pointer;display:block;}
+.nav-links li a{font-size:0.69rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:0.4rem 0.9rem;transition:color 0.2s;cursor:pointer;display:block;}
 .nav-links li a:hover,.nav-links li a.active{color:var(--ink);}
 .nav-links li a.active{border-bottom:2px solid var(--accent);}
-.nav-cta{font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:0.55rem 1.4rem;text-decoration:none;transition:background 0.2s;cursor:pointer;}
+.nav-right{display:flex;align-items:center;gap:1rem;}
+.nav-cv{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);padding:0.45rem 1rem;text-decoration:none;transition:all 0.2s;}
+.nav-cv:hover{background:var(--accent);color:var(--white);}
+.nav-cta{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:0.48rem 1.2rem;text-decoration:none;transition:background 0.2s;}
 .nav-cta:hover{background:var(--accent);}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
-.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);transition:all 0.3s;}
-.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--line);z-index:499;flex-direction:column;padding:1rem 5vw 1.5rem;}
-.mobile-menu a{font-size:0.8rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:0.7rem 0;border-bottom:1px solid var(--line);display:block;}
-.mobile-menu a:last-child{border-bottom:none;}
-.mobile-menu.open{display:flex;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{display:block;width:20px;height:2px;background:var(--ink);}
+.mob-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--line);z-index:499;padding:1rem 6vw 1.5rem;flex-direction:column;gap:0;}
+.mob-menu a{font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:0.75rem 0;border-bottom:1px solid var(--line);display:block;cursor:pointer;}
+.mob-menu a:last-child{border:none;}
+.mob-menu.open{display:flex;}
 
 /* ── PAGE SYSTEM ── */
-.page{display:none;min-height:100vh;padding-top:64px;}
+.page{display:none;min-height:100vh;padding-top:60px;}
 .page.active{display:block;}
 
-/* ── SHARED COMPONENTS ── */
-.section-tag{font-size:0.64rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem;display:flex;align-items:center;gap:0.8rem;}
-.section-tag::before{content:'';display:block;width:20px;height:1px;background:var(--accent);}
-h2{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,3vw,2.8rem);font-weight:400;line-height:1.18;margin-bottom:2.5rem;}
+/* ── SHARED ── */
+.stag{font-size:0.63rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin-bottom:0.85rem;display:flex;align-items:center;gap:0.75rem;}
+.stag::before{content:'';display:block;width:18px;height:1px;background:var(--accent);}
+.stag-white{color:var(--accent);}
+.stag-white::before{background:var(--accent);}
+h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:400;line-height:1.18;margin-bottom:2rem;}
 h2 em{font-style:italic;color:var(--muted);}
-h3{font-family:'DM Serif Display',serif;font-size:1.5rem;font-weight:400;margin-bottom:0.8rem;}
-.pad{padding:5.5rem 8vw;}
-.pad-dark{padding:5.5rem 8vw;background:var(--dark);}
-.pad-card{padding:5.5rem 8vw;background:var(--card);}
+h3{font-family:'DM Serif Display',serif;font-size:1.3rem;font-weight:400;margin-bottom:0.6rem;}
+.p1{padding:5rem 8vw;}
+.p2{padding:5rem 8vw;background:var(--card);}
+.p3{padding:5rem 8vw;background:var(--dark);}
 .divider{height:1px;background:var(--line);}
-.btn-primary{font-size:0.74rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);background:var(--accent);padding:0.82rem 1.9rem;text-decoration:none;border:2px solid var(--accent);transition:all 0.25s;display:inline-block;cursor:pointer;}
-.btn-primary:hover{background:transparent;color:var(--accent);}
-.btn-dark{font-size:0.74rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:0.82rem 1.9rem;text-decoration:none;border:2px solid var(--ink);transition:all 0.25s;display:inline-block;cursor:pointer;}
+.btn-gold{font-size:0.72rem;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--white);background:var(--accent);padding:0.8rem 1.8rem;text-decoration:none;border:2px solid var(--accent);transition:all 0.25s;display:inline-block;cursor:pointer;}
+.btn-gold:hover{background:transparent;color:var(--accent);}
+.btn-dark{font-size:0.72rem;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:0.8rem 1.8rem;text-decoration:none;border:2px solid var(--ink);transition:all 0.25s;display:inline-block;cursor:pointer;}
 .btn-dark:hover{background:var(--accent);border-color:var(--accent);}
-.btn-ghost{font-size:0.74rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);padding:0.82rem 1.9rem;text-decoration:none;border:2px solid var(--ink);transition:all 0.25s;display:inline-block;cursor:pointer;}
-.btn-ghost:hover{background:var(--ink);color:var(--white);}
-.tag{font-size:0.59rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.24rem 0.68rem;background:var(--card);color:var(--muted);}
-.tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.btn-outline{font-size:0.72rem;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);padding:0.8rem 1.8rem;text-decoration:none;border:2px solid var(--ink);transition:all 0.25s;display:inline-block;cursor:pointer;}
+.btn-outline:hover{background:var(--ink);color:var(--white);}
+.chip-set{display:flex;gap:0.6rem;flex-wrap:wrap;}
+.chip{font-size:0.62rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.13);padding:0.3rem 0.8rem;}
+.tag{font-size:0.58rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.65rem;background:var(--card);color:var(--muted);display:inline-block;}
+.tags{display:flex;flex-wrap:wrap;gap:0.38rem;}
 
-/* ════════════════════════════════
+/* ══════════════════════
    PAGE: HOME
-════════════════════════════════ */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--dark);padding-top:0!important;}
-canvas#heroCanvas{position:absolute;inset:0;width:100%;height:100%;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,18,0.82) 0%,rgba(10,10,18,0.35) 100%);}
-.hero-content{position:relative;z-index:10;padding:8rem 8vw 5rem;max-width:920px;}
-.hero-tag{font-size:0.66rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.9rem;}
-.hero-tag::before{content:'';display:block;width:30px;height:1px;background:var(--accent);}
-.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.8rem,5.5vw,5rem);line-height:1.08;font-weight:400;color:var(--white);margin-bottom:1.6rem;}
+══════════════════════ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--dark);}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(140deg,rgba(10,10,18,0.88) 0%,rgba(10,10,18,0.3) 100%);}
+.hero-body{position:relative;z-index:10;padding:8rem 8vw 5rem;max-width:860px;}
+.hero-eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem;display:flex;align-items:center;gap:0.85rem;}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--accent);}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,5vw,4.6rem);line-height:1.08;font-weight:400;color:var(--white);margin-bottom:1.5rem;}
 .hero h1 em{font-style:italic;color:var(--accent);}
-.hero-sub{font-size:1.02rem;color:rgba(255,255,255,0.58);max-width:510px;margin-bottom:2.8rem;line-height:1.88;}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3.5rem;}
-.hero-chips{display:flex;gap:0.7rem;flex-wrap:wrap;}
-.chip{font-size:0.64rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.14);padding:0.32rem 0.85rem;}
-.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.28);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;}
-.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,var(--accent),transparent);animation:sp 2s ease infinite;}
+.hero-sub{font-size:0.98rem;color:rgba(255,255,255,0.58);max-width:500px;margin-bottom:1.2rem;line-height:1.88;}
+
+/* Honest status bar */
+.status-bar{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:0.5rem 1rem;margin-bottom:2.5rem;}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:pulse-dot 2s ease infinite;}
+@keyframes pulse-dot{0%,100%{opacity:1;}50%{opacity:0.4;}}
+.status-text{font-size:0.68rem;font-weight:500;letter-spacing:0.1em;color:rgba(255,255,255,0.55);text-transform:uppercase;}
+
+.hero-actions{display:flex;gap:0.9rem;flex-wrap:wrap;margin-bottom:3rem;}
+.hero-chips{display:flex;gap:0.6rem;flex-wrap:wrap;}
+
+/* target badge */
+.target-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.3);padding:0.45rem 0.9rem;margin-bottom:1.5rem;}
+.target-badge-label{font-size:0.63rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);}
+
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.45rem;color:rgba(255,255,255,0.25);font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;}
+.scroll-line{width:1px;height:32px;background:linear-gradient(to bottom,var(--accent),transparent);animation:sp 2s ease infinite;}
 @keyframes sp{0%,100%{opacity:0.3;}50%{opacity:1;}}
 
-/* HOME metrics bar */
-.home-metrics{background:var(--ink);display:grid;grid-template-columns:repeat(4,1fr);}
-.hm{padding:2.8rem 2.2rem;border-right:1px solid rgba(255,255,255,0.06);}
-.hm:last-child{border-right:none;}
-.hm-num{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.2vw,3rem);color:var(--accent);line-height:1;margin-bottom:0.4rem;}
-.hm-desc{font-size:0.76rem;color:rgba(255,255,255,0.4);line-height:1.55;max-width:150px;}
+/* metrics */
+.metrics{background:var(--ink);display:grid;grid-template-columns:repeat(4,1fr);}
+.met{padding:2.5rem 2rem;border-right:1px solid rgba(255,255,255,0.06);}
+.met:last-child{border-right:none;}
+.met-n{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,3vw,2.8rem);color:var(--accent);line-height:1;margin-bottom:0.4rem;}
+.met-d{font-size:0.74rem;color:rgba(255,255,255,0.38);line-height:1.55;max-width:150px;}
 
-/* HOME preview cards */
-.home-previews{padding:5.5rem 8vw;background:var(--bg);}
-.home-previews h2{margin-bottom:0.7rem;}
-.home-previews-sub{font-size:0.97rem;color:var(--muted);max-width:500px;margin-bottom:3rem;line-height:1.8;}
-.preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.preview-card{background:var(--white);border:1px solid var(--line);padding:2.2rem;cursor:pointer;transition:all 0.28s;position:relative;overflow:hidden;}
-.preview-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
-.preview-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.08);border-color:transparent;}
-.preview-card:hover::before{transform:scaleX(1);}
-.pc-icon{font-size:1.8rem;margin-bottom:1rem;}
-.pc-title{font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:0.6rem;}
-.pc-desc{font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1.2rem;}
-.pc-link{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:0.4rem;}
+/* home nav cards */
+.nav-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.nc{background:var(--white);border:1px solid var(--line);padding:2rem 1.8rem;cursor:pointer;transition:all 0.25s;position:relative;overflow:hidden;}
+.nc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform 0.28s;}
+.nc:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(0,0,0,0.07);border-color:transparent;}
+.nc:hover::before{transform:scaleX(1);}
+.nc-icon{font-size:1.6rem;margin-bottom:0.8rem;}
+.nc-title{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:0.5rem;}
+.nc-desc{font-size:0.8rem;color:var(--muted);line-height:1.68;margin-bottom:1rem;}
+.nc-link{font-size:0.64rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);}
 
-/* ════════════════════════════════
+/* ══════════════════════
    PAGE: ABOUT
-════════════════════════════════ */
-.about-hero{background:var(--dark);padding:5.5rem 8vw 4rem;position:relative;overflow:hidden;}
-.about-hero::after{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,169,110,0.12) 0%,transparent 65%);pointer-events:none;}
-.about-hero-tag{font-size:0.64rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:flex;align-items:center;gap:0.8rem;}
-.about-hero-tag::before{content:'';display:block;width:22px;height:1px;background:var(--accent);}
-.about-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,4rem);color:var(--white);font-weight:400;line-height:1.1;margin-bottom:1.5rem;}
-.about-hero h1 em{color:var(--accent);font-style:italic;}
-.about-hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);max-width:560px;line-height:1.88;}
-.about-story{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
-.about-story-text p{font-size:0.97rem;color:var(--muted);line-height:1.92;margin-bottom:1.2rem;}
-.big-quote{font-family:'DM Serif Display',serif;font-size:1.55rem;line-height:1.4;color:var(--ink);border-left:3px solid var(--accent);padding-left:1.5rem;margin:2rem 0;}
-.about-aside-block{background:var(--white);padding:1.7rem 1.6rem;border-left:3px solid var(--accent);margin-bottom:1rem;}
-.aab-label{font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:0.45rem;}
-.aab-text{font-size:0.87rem;color:var(--muted);line-height:1.65;}
-.fun-facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;}
-.ff{background:var(--white);padding:1.6rem 1.5rem;}
-.ff-icon{font-size:1.4rem;margin-bottom:0.65rem;}
-.ff-title{font-size:0.67rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.35rem;}
-.ff-text{font-size:0.83rem;color:var(--muted);line-height:1.7;}
-.ff-wide{grid-column:span 2;}
-.skills-section{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);}
-.skill-block{background:var(--white);padding:2.2rem 2rem;}
-.sb-title{font-size:0.66rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
-.sb-items{display:flex;flex-direction:column;gap:0.5rem;}
-.sb-item{font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:0.5rem;}
-.sb-item::before{content:'▸';color:var(--accent);font-size:0.6rem;flex-shrink:0;}
-.certs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
-.cert-card{background:var(--white);padding:1.8rem;border:1px solid var(--line);border-left:3px solid var(--accent);}
-.cert-name{font-family:'DM Serif Display',serif;font-size:1.05rem;margin-bottom:0.35rem;}
-.cert-issuer{font-size:0.76rem;color:var(--accent);margin-bottom:0.2rem;}
-.cert-date{font-size:0.72rem;color:var(--muted);}
+══════════════════════ */
+.about-banner{background:var(--dark);padding:5rem 8vw 3.5rem;position:relative;overflow:hidden;}
+.about-banner::after{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(200,169,110,0.1) 0%,transparent 65%);pointer-events:none;}
+.about-banner h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);color:var(--white);font-weight:400;line-height:1.1;margin-bottom:1.2rem;}
+.about-banner h1 em{color:var(--accent);font-style:italic;}
+.about-banner p{font-size:0.97rem;color:rgba(255,255,255,0.5);max-width:540px;line-height:1.88;}
 
-/* ════════════════════════════════
+/* honest positioning note */
+.honesty-box{background:rgba(200,169,110,0.08);border:1px solid rgba(200,169,110,0.25);border-left:3px solid var(--accent);padding:1.2rem 1.5rem;margin-bottom:2.5rem;}
+.hb-label{font-size:0.6rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:0.4rem;}
+.hb-text{font-size:0.85rem;color:var(--muted);line-height:1.7;}
+
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start;}
+.story-text p{font-size:0.95rem;color:var(--muted);line-height:1.9;margin-bottom:1.1rem;}
+.bq{font-family:'DM Serif Display',serif;font-size:1.45rem;line-height:1.42;color:var(--ink);border-left:3px solid var(--accent);padding-left:1.4rem;margin:1.8rem 0;}
+.aside-block{background:var(--white);padding:1.4rem 1.5rem;border-left:3px solid var(--accent);margin-bottom:0.85rem;}
+.ab-label{font-size:0.59rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:0.35rem;}
+.ab-text{font-size:0.84rem;color:var(--muted);line-height:1.62;}
+
+/* skills grid */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);}
+.sg{background:var(--white);padding:2rem 1.8rem;}
+.sg-title{font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem;}
+.sg-items{display:flex;flex-direction:column;gap:0.45rem;}
+.sg-item{font-size:0.83rem;color:var(--muted);display:flex;align-items:center;gap:0.45rem;}
+.sg-item::before{content:'▸';color:var(--accent);font-size:0.58rem;flex-shrink:0;}
+
+/* education */
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.edu-card{padding:2rem;border:1px solid rgba(255,255,255,0.08);transition:border-color 0.25s;}
+.edu-card:hover{border-color:var(--accent);}
+.edu-deg{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--white);margin-bottom:0.45rem;}
+.edu-school{font-size:0.76rem;color:var(--accent);margin-bottom:0.2rem;}
+.edu-year{font-size:0.7rem;color:rgba(255,255,255,0.28);}
+
+/* ══════════════════════
    PAGE: EXPERIENCE
-════════════════════════════════ */
-.exp-hero{background:var(--dark);padding:5.5rem 8vw 4rem;}
-.exp-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,4rem);color:var(--white);font-weight:400;line-height:1.1;margin-bottom:1.4rem;}
-.exp-hero h1 em{color:var(--accent);font-style:italic;}
-.exp-hero-sub{font-size:1rem;color:rgba(255,255,255,0.52);max-width:540px;line-height:1.88;}
-.exp-timeline{position:relative;padding-left:2px;}
-.exp-item{display:grid;grid-template-columns:280px 1fr;gap:3rem;padding:3.5rem 0;border-bottom:1px solid var(--line);}
+══════════════════════ */
+.exp-banner{background:var(--dark);padding:5rem 8vw 3.5rem;}
+.exp-banner h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);color:var(--white);font-weight:400;line-height:1.1;margin-bottom:1.2rem;}
+.exp-banner h1 em{color:var(--accent);font-style:italic;}
+.exp-banner p{font-size:0.97rem;color:rgba(255,255,255,0.5);max-width:540px;line-height:1.88;}
+
+/* Google XYZ format: Accomplished X, measured by Y, by doing Z */
+.exp-item{display:grid;grid-template-columns:260px 1fr;gap:2.8rem;padding:3rem 0;border-bottom:1px solid var(--line);}
 .exp-item:first-child{border-top:1px solid var(--line);}
-.exp-meta{}
-.exp-co{font-size:0.67rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:0.35rem;}
-.exp-date{font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem;}
-.exp-loc{font-size:0.75rem;color:var(--muted);display:flex;align-items:center;gap:0.35rem;}
-.exp-loc::before{content:'📍';font-size:0.65rem;}
-.exp-role{font-family:'DM Serif Display',serif;font-size:1.55rem;margin-bottom:1rem;}
-.exp-body p{font-size:0.88rem;color:var(--muted);line-height:1.82;margin-bottom:1rem;}
-.exp-highlights{display:flex;flex-direction:column;gap:0.55rem;margin-bottom:1.2rem;}
-.exp-hi{font-size:0.85rem;color:var(--ink);display:flex;align-items:flex-start;gap:0.7rem;line-height:1.65;}
-.exp-hi::before{content:'→';color:var(--accent);font-size:0.72rem;margin-top:0.22rem;flex-shrink:0;}
+.exp-co{font-size:0.65rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:0.3rem;}
+.exp-date{font-size:0.76rem;color:var(--muted);margin-bottom:0.3rem;}
+.exp-loc{font-size:0.73rem;color:var(--muted);margin-bottom:0.7rem;}
+.exp-level{font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.6rem;background:rgba(200,169,110,0.1);color:var(--accent);display:inline-block;margin-bottom:0.5rem;}
+.exp-role{font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:0.8rem;}
+.exp-context{font-size:0.86rem;color:var(--muted);line-height:1.78;margin-bottom:1rem;font-style:italic;border-left:2px solid var(--line);padding-left:1rem;}
+.exp-xyz{display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1.1rem;}
+.xyz{font-size:0.86rem;color:var(--ink);line-height:1.68;display:flex;align-items:flex-start;gap:0.7rem;}
+.xyz::before{content:'→';color:var(--accent);font-size:0.7rem;margin-top:0.2rem;flex-shrink:0;}
+.xyz strong{color:var(--ink);font-weight:600;}
 
-/* ════════════════════════════════
-   PAGE: CASE STUDIES
-════════════════════════════════ */
-.cs-hero{background:var(--dark);padding:5.5rem 8vw 4rem;}
-.cs-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,4rem);color:var(--white);font-weight:400;line-height:1.1;margin-bottom:1.4rem;}
-.cs-hero h1 em{color:var(--accent);font-style:italic;}
-.cs-hero-sub{font-size:1rem;color:rgba(255,255,255,0.52);max-width:560px;line-height:1.88;}
-.cs-list{display:flex;flex-direction:column;gap:0;}
-.cs-full{padding:4rem 8vw;border-bottom:1px solid var(--line);}
-.cs-full:nth-child(even){background:var(--card);}
-.cs-full-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
-.cs-num{font-family:'DM Serif Display',serif;font-size:4rem;color:var(--line);line-height:1;margin-bottom:0.5rem;}
-.cs-company{font-size:0.64rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem;}
-.cs-title-full{font-family:'DM Serif Display',serif;font-size:1.8rem;line-height:1.2;margin-bottom:1rem;}
-.cs-summary{font-size:0.9rem;color:var(--muted);line-height:1.85;margin-bottom:1.5rem;}
-.cs-meta-bar{display:flex;gap:1.8rem;flex-wrap:wrap;padding:1.2rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:1.5rem;}
-.cs-meta-item{}
-.cs-meta-label{font-size:0.6rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:0.2rem;}
-.cs-meta-val{font-size:0.83rem;color:var(--ink);font-weight:500;}
-.cs-right-head{font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;margin-top:1.5rem;}
-.cs-right-head:first-child{margin-top:0;}
-.cs-steps-full{display:flex;flex-direction:column;gap:1rem;margin-bottom:0.5rem;}
-.cs-step-full{display:flex;gap:1rem;align-items:flex-start;}
-.cs-step-n{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--accent);min-width:26px;line-height:1.5;}
-.cs-step-t{font-size:0.87rem;color:var(--muted);line-height:1.75;}
-.cs-impacts-full{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.cs-impact-full{background:var(--dark);padding:1.2rem 1.3rem;border-top:2px solid var(--accent);}
-.cs-impact-full.light{background:var(--white);border:1px solid var(--line);border-top:2px solid var(--accent);}
-.ci-num{font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--accent);line-height:1;margin-bottom:0.3rem;}
-.ci-text{font-size:0.73rem;color:rgba(255,255,255,0.42);line-height:1.5;}
-.ci-text.dark{color:var(--muted);}
+/* career path indicator */
+.path-box{background:rgba(79,110,247,0.06);border:1px solid rgba(79,110,247,0.2);border-left:3px solid var(--accent2);padding:1rem 1.2rem;margin-bottom:1rem;}
+.path-label{font-size:0.59rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent2);margin-bottom:0.3rem;}
+.path-text{font-size:0.82rem;color:var(--muted);line-height:1.62;}
 
-/* ════════════════════════════════
+/* ══════════════════════
+   PAGE: PROJECTS
+══════════════════════ */
+.proj-banner{background:var(--dark);padding:5rem 8vw 3.5rem;position:relative;overflow:hidden;}
+.proj-banner::after{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(79,110,247,0.12) 0%,transparent 65%);pointer-events:none;}
+.proj-banner h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);color:var(--white);font-weight:400;line-height:1.1;margin-bottom:1.2rem;}
+.proj-banner h1 em{color:var(--accent);font-style:italic;}
+.proj-banner p{font-size:0.97rem;color:rgba(255,255,255,0.5);max-width:540px;line-height:1.88;}
+
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.proj-card{background:var(--white);border:1px solid var(--line);padding:2.4rem;position:relative;overflow:hidden;transition:all 0.28s;}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
+.proj-card:hover{border-color:var(--accent);box-shadow:0 14px 44px rgba(0,0,0,0.09);transform:translateY(-4px);}
+.proj-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.9rem;}
+.proj-type{font-size:0.58rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);background:rgba(200,169,110,0.09);padding:0.2rem 0.6rem;}
+.proj-gh{font-size:0.68rem;font-weight:500;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:0.3rem;transition:color 0.2s;}
+.proj-gh:hover{color:var(--ink);}
+.proj-title{font-family:'DM Serif Display',serif;font-size:1.5rem;line-height:1.18;margin-bottom:0.7rem;}
+.proj-problem{font-size:0.79rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;}
+.proj-desc{font-size:0.86rem;color:var(--muted);line-height:1.78;margin-bottom:1.2rem;}
+.proj-stack{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.2rem;}
+.proj-stag{font-size:0.58rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.2rem 0.6rem;background:var(--card);color:var(--muted);}
+.proj-impact{font-size:0.82rem;color:var(--ink);font-weight:500;border-top:1px solid var(--line);padding-top:0.9rem;line-height:1.62;margin-bottom:1rem;}
+.proj-impact span{color:var(--accent);font-weight:600;}
+.proj-btn{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:0.08rem;transition:color 0.2s,border-color 0.2s;}
+.proj-btn:hover{color:var(--accent);border-color:var(--accent);}
+.proj-wip{background:var(--card);border:1px dashed var(--line);padding:2.4rem;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;}
+.proj-wip-icon{font-size:1.8rem;margin-bottom:0.8rem;}
+.proj-wip-title{font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:0.5rem;}
+.proj-wip-text{font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:0.8rem;}
+.proj-wip-eta{font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent2);background:rgba(79,110,247,0.08);padding:0.22rem 0.6rem;display:inline-block;}
+
+/* ══════════════════════
    PAGE: WHY ME
-════════════════════════════════ */
-.wm-hero{background:var(--dark);padding:5.5rem 8vw 4rem;position:relative;overflow:hidden;}
-.wm-hero::after{content:'';position:absolute;bottom:-150px;left:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(124,106,255,0.1) 0%,transparent 65%);pointer-events:none;}
-.wm-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,4rem);color:var(--white);font-weight:400;line-height:1.1;margin-bottom:1.4rem;}
-.wm-hero h1 em{color:var(--accent);font-style:italic;}
-.wm-hero-sub{font-size:1rem;color:rgba(255,255,255,0.52);max-width:560px;line-height:1.88;}
-.wm-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);}
-.wm-card{background:var(--white);padding:2.8rem 2.4rem;}
-.wm-num{font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--accent);line-height:1;margin-bottom:1rem;}
-.wm-title{font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:0.9rem;}
-.wm-body{font-size:0.85rem;color:var(--muted);line-height:1.8;margin-bottom:1.3rem;}
-.wm-list{display:flex;flex-direction:column;gap:0.5rem;}
-.wm-item{font-size:0.8rem;color:var(--ink);display:flex;align-items:flex-start;gap:0.55rem;}
-.wm-item::before{content:'→';color:var(--accent);font-size:0.7rem;margin-top:0.18rem;flex-shrink:0;}
-.wm-diff{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
-.wm-diff-text h3{margin-bottom:1rem;}
-.wm-diff-text p{font-size:0.93rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;}
-.wm-diff-vis{display:flex;flex-direction:column;gap:1rem;}
-.wm-bar-row{}
-.wm-bar-label{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;display:flex;justify-content:space-between;}
-.wm-bar-track{height:8px;background:var(--line);border-radius:0;}
-.wm-bar-fill{height:8px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:0;}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.testi{background:var(--white);padding:2.1rem;border-top:3px solid var(--accent);}
-.testi-q{font-family:'DM Serif Display',serif;font-size:0.97rem;font-style:italic;color:var(--ink);line-height:1.75;margin-bottom:1.3rem;}
-.testi-author{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:0.2rem;}
-.testi-role{font-size:0.75rem;color:var(--muted);}
-.testi-note{font-size:0.63rem;color:rgba(200,169,110,0.5);margin-top:0.6rem;font-style:italic;}
+══════════════════════ */
+.wm-banner{background:var(--dark);padding:5rem 8vw 3.5rem;position:relative;overflow:hidden;}
+.wm-banner::after{content:'';position:absolute;bottom:-100px;left:-100px;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(79,110,247,0.1) 0%,transparent 65%);pointer-events:none;}
+.wm-banner h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);color:var(--white);font-weight:400;line-height:1.1;margin-bottom:1.2rem;}
+.wm-banner h1 em{color:var(--accent);font-style:italic;}
+.wm-banner p{font-size:0.97rem;color:rgba(255,255,255,0.5);max-width:540px;line-height:1.88;}
 
-/* ════════════════════════════════
-   PAGE: LAB
-════════════════════════════════ */
-.lab-hero{background:var(--dark);padding:5.5rem 8vw 4rem;position:relative;overflow:hidden;}
-.lab-hero::after{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(124,106,255,0.15) 0%,transparent 65%);pointer-events:none;}
-.lab-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,4rem);color:var(--white);font-weight:400;line-height:1.1;margin-bottom:1.4rem;}
-.lab-hero h1 em{color:var(--accent);font-style:italic;}
-.lab-hero-sub{font-size:1rem;color:rgba(255,255,255,0.52);max-width:560px;line-height:1.88;}
-.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
-.lab-card{background:var(--white);border:1px solid var(--line);padding:2.6rem;position:relative;overflow:hidden;transition:all 0.3s;}
-.lab-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
-.lab-card:hover{border-color:var(--accent);box-shadow:0 16px 48px rgba(0,0,0,0.1);transform:translateY(-5px);}
-.lab-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.1rem;}
-.lab-type{font-size:0.59rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);background:rgba(200,169,110,0.1);padding:0.22rem 0.6rem;}
-.lab-gh{font-size:0.7rem;font-weight:500;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:0.35rem;transition:color 0.2s;}
-.lab-gh:hover{color:var(--ink);}
-.lab-title{font-family:'DM Serif Display',serif;font-size:1.65rem;line-height:1.18;margin-bottom:0.85rem;}
-.lab-desc{font-size:0.88rem;color:var(--muted);line-height:1.8;margin-bottom:1.4rem;}
-.lab-stack{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:1.4rem;}
-.lab-stag{font-size:0.59rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.65rem;background:var(--card);color:var(--muted);}
-.lab-why{font-size:0.82rem;color:var(--ink);font-weight:500;border-top:1px solid var(--line);padding-top:1.1rem;line-height:1.68;margin-bottom:1.2rem;}
-.lab-why span{color:var(--accent);font-weight:600;}
-.lab-btn{display:inline-flex;align-items:center;gap:0.45rem;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:0.1rem;transition:color 0.2s,border-color 0.2s;}
-.lab-btn:hover{color:var(--accent);border-color:var(--accent);}
-.lab-coming{background:var(--card);border:1px dashed var(--line);padding:2.6rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:200px;}
-.lab-coming-icon{font-size:2rem;margin-bottom:1rem;}
-.lab-coming-text{font-size:0.85rem;color:var(--muted);line-height:1.7;}
-.lab-philosophy{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.lab-phil-text p{font-size:0.95rem;color:var(--muted);line-height:1.88;margin-bottom:1rem;}
-.lab-phil-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
-.lab-stat{padding:2rem;background:var(--white);border-top:2px solid var(--accent);}
-.lab-stat-num{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--accent);line-height:1;margin-bottom:0.4rem;}
-.lab-stat-text{font-size:0.78rem;color:var(--muted);line-height:1.5;}
+.wm-3col{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);}
+.wm-card{background:var(--white);padding:2.5rem 2.2rem;}
+.wm-num{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--accent);line-height:1;margin-bottom:0.9rem;}
+.wm-title{font-family:'DM Serif Display',serif;font-size:1.12rem;margin-bottom:0.75rem;}
+.wm-body{font-size:0.83rem;color:var(--muted);line-height:1.78;margin-bottom:1.1rem;}
+.wm-list{display:flex;flex-direction:column;gap:0.45rem;}
+.wm-item{font-size:0.79rem;color:var(--ink);display:flex;align-items:flex-start;gap:0.5rem;}
+.wm-item::before{content:'→';color:var(--accent);font-size:0.67rem;margin-top:0.2rem;flex-shrink:0;}
 
-/* ════════════════════════════════
-   PAGE: CONTACT (embedded in nav)
-════════════════════════════════ */
+/* skill bars */
+.bars-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 4rem;align-items:start;}
+.bar-row{margin-bottom:1.1rem;}
+.bar-label-row{display:flex;justify-content:space-between;margin-bottom:0.4rem;}
+.bar-label{font-size:0.7rem;font-weight:500;color:var(--ink);}
+.bar-pct{font-size:0.7rem;font-weight:600;color:var(--accent);}
+.bar-track{height:6px;background:var(--line);}
+.bar-fill{height:6px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
+.bar-note{font-size:0.66rem;color:var(--muted);margin-top:0.25rem;font-style:italic;}
 
-/* ── FOOTER ── */
-.site-footer{background:var(--dark);padding:2rem 8vw;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06);}
-.footer-name{font-family:'DM Serif Display',serif;font-size:0.9rem;color:rgba(255,255,255,0.38);}
-.footer-links{display:flex;gap:1.5rem;}
-.footer-links a{font-size:0.7rem;color:rgba(255,255,255,0.28);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;}
-.footer-links a:hover{color:var(--accent);}
-.footer-copy{font-size:0.67rem;color:rgba(255,255,255,0.2);letter-spacing:0.1em;}
+/* recruiter CTA */
+.recruiter-cta{background:var(--ink);padding:4.5rem 8vw;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;}
+.rcta-text h3{font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--white);font-weight:400;margin-bottom:0.6rem;}
+.rcta-text p{font-size:0.92rem;color:rgba(255,255,255,0.5);max-width:480px;line-height:1.78;}
+.rcta-actions{display:flex;flex-direction:column;gap:0.8rem;min-width:200px;}
+
+/* ══════════════════════
+   FOOTER
+══════════════════════ */
+.ft{background:var(--dark);padding:1.8rem 8vw;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06);}
+.ft-name{font-family:'DM Serif Display',serif;font-size:0.88rem;color:rgba(255,255,255,0.35);}
+.ft-links{display:flex;gap:1.5rem;}
+.ft-links a{font-size:0.67rem;color:rgba(255,255,255,0.25);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;}
+.ft-links a:hover{color:var(--accent);}
+.ft-copy{font-size:0.65rem;color:rgba(255,255,255,0.18);letter-spacing:0.08em;}
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
   .nav-links{display:none;}
-  .nav-hamburger{display:flex;}
-  .home-metrics{grid-template-columns:repeat(2,1fr);}
-  .hm{border-right:none;border-bottom:1px solid rgba(255,255,255,0.06);padding:1.8rem 1.5rem;}
-  .hm:nth-child(odd){border-right:1px solid rgba(255,255,255,0.06);}
-  .hm:nth-child(3),.hm:nth-child(4){border-bottom:none;}
-  .preview-grid{grid-template-columns:1fr;}
-  .pad,.pad-dark,.pad-card{padding:3.5rem 6vw;}
-  .about-story{grid-template-columns:1fr;gap:2.5rem;}
-  .fun-facts-grid{grid-template-columns:1fr;}
-  .ff-wide{grid-column:span 1;}
-  .skills-section{grid-template-columns:1fr;}
-  .certs-grid{grid-template-columns:1fr;}
+  .nav-right .nav-cv{display:none;}
+  .hamburger{display:flex;}
+  .metrics{grid-template-columns:repeat(2,1fr);}
+  .met{border-right:none;border-bottom:1px solid rgba(255,255,255,0.06);padding:1.8rem 1.5rem;}
+  .met:nth-child(odd){border-right:1px solid rgba(255,255,255,0.06);}
+  .met:nth-child(3),.met:nth-child(4){border-bottom:none;}
+  .nav-cards{grid-template-columns:1fr;}
+  .p1,.p2,.p3{padding:3.5rem 6vw;}
+  .story-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .skills-grid{grid-template-columns:1fr;}
+  .edu-grid{grid-template-columns:1fr;}
   .exp-item{grid-template-columns:1fr;gap:0.5rem;}
-  .cs-full-inner{grid-template-columns:1fr;gap:2rem;}
-  .cs-impacts-full{grid-template-columns:1fr 1fr;}
-  .wm-cards{grid-template-columns:1fr;}
-  .wm-diff{grid-template-columns:1fr;gap:2rem;}
-  .testi-grid{grid-template-columns:1fr;}
-  .lab-grid{grid-template-columns:1fr;}
-  .lab-philosophy{grid-template-columns:1fr;gap:2.5rem;}
-  .lab-phil-stats{grid-template-columns:1fr 1fr;}
-  .hero-content{padding:6rem 6vw 4rem;}
-  .hero h1{font-size:2.5rem;}
-  h2{font-size:1.8rem;}
-  .site-footer{flex-direction:column;gap:1rem;text-align:center;}
-  .footer-links{flex-wrap:wrap;justify-content:center;}
+  .proj-grid{grid-template-columns:1fr;}
+  .wm-3col{grid-template-columns:1fr;}
+  .bars-grid{grid-template-columns:1fr;gap:0;}
+  .recruiter-cta{grid-template-columns:1fr;gap:1.5rem;}
+  .ft{flex-direction:column;gap:1rem;text-align:center;}
+  .ft-links{flex-wrap:wrap;justify-content:center;}
+  h2{font-size:1.7rem;}
+  .hero h1{font-size:2.3rem;}
 }
 </style>
 </head>
 <body>
 
-<!-- ══════════ NAV ══════════ -->
+<!-- NAV -->
 <nav>
-  <a class="nav-logo" onclick="showPage('home')">Monil Raval</a>
+  <a class="nav-logo" onclick="go('home')">Monil Raval</a>
   <ul class="nav-links">
-    <li><a onclick="showPage('about')" id="nav-about">About</a></li>
-    <li><a onclick="showPage('experience')" id="nav-experience">Experience</a></li>
-    <li><a onclick="showPage('casestudies')" id="nav-casestudies">Case Studies</a></li>
-    <li><a onclick="showPage('whyme')" id="nav-whyme">Why Me</a></li>
-    <li><a onclick="showPage('lab')" id="nav-lab">Lab</a></li>
+    <li><a onclick="go('about')" id="n-about">About</a></li>
+    <li><a onclick="go('experience')" id="n-experience">Experience</a></li>
+    <li><a onclick="go('projects')" id="n-projects">Projects</a></li>
+    <li><a onclick="go('whyme')" id="n-whyme">Why Me</a></li>
   </ul>
-  <a class="nav-cta" href="mailto:monilraval@gmail.com">Contact</a>
-  <div class="nav-hamburger" onclick="toggleMenu()" id="hamburger">
-    <span></span><span></span><span></span>
+  <div class="nav-right">
+    <a class="nav-cv" href="https://www.linkedin.com/in/monilraval" target="_blank">LinkedIn</a>
+    <a class="nav-cta" href="mailto:monilraval@gmail.com">Contact Me</a>
+    <div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div>
   </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a onclick="showPage('home');toggleMenu()">Home</a>
-  <a onclick="showPage('about');toggleMenu()">About</a>
-  <a onclick="showPage('experience');toggleMenu()">Experience</a>
-  <a onclick="showPage('casestudies');toggleMenu()">Case Studies</a>
-  <a onclick="showPage('whyme');toggleMenu()">Why Me</a>
-  <a onclick="showPage('lab');toggleMenu()">Lab</a>
+<div class="mob-menu" id="mobMenu">
+  <a onclick="go('home');toggleMob()">Home</a>
+  <a onclick="go('about');toggleMob()">About</a>
+  <a onclick="go('experience');toggleMob()">Experience</a>
+  <a onclick="go('projects');toggleMob()">Projects</a>
+  <a onclick="go('whyme');toggleMob()">Why Me</a>
   <a href="mailto:monilraval@gmail.com">Contact</a>
 </div>
 
-<!-- ══════════════════════════════════
-     PAGE: HOME
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════ -->
 <div class="page active" id="page-home">
   <section class="hero">
     <canvas id="heroCanvas"></canvas>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-tag">Operations & Digital Transformation Leader</div>
-      <h1>Turning complexity<br>into <em>measurable</em> performance.</h1>
-      <p class="hero-sub">Senior operations and digital leader with dual Master's degrees. Proven track record at Amazon EU, AGCO GmbH, and Robert Bosch & now building AI-powered ventures from Bavaria.</p>
+    <div class="hero-ov"></div>
+    <div class="hero-body">
+      <div class="target-badge">
+        <span class="target-badge-label">🎯 Seeking: Product Owner · Operations Analyst · Digital Transformation roles in Germany</span>
+      </div>
+      <div class="hero-eyebrow">Product · Operations · Data-Driven Execution</div>
+      <h1>From warehouse floor<br>to <em>product thinking.</em></h1>
+      <p class="hero-sub">Operations professional at Amazon EU with hands-on product ownership experience at AGCO and enterprise change management at Bosch. MBA + MSc IT. Building AI tools in parallel. Available for Product Owner and Operations roles across Germany.</p>
+      <div class="status-bar">
+        <div class="status-dot"></div>
+        <span class="status-text">Open to new opportunities · Kaufbeuren, Bavaria · Relocation flexible</span>
+      </div>
       <div class="hero-actions">
-        <a class="btn-primary" onclick="showPage('about')">Explore My Story</a>
-        <a class="btn-ghost" href="mailto:monilraval@gmail.com">Get In Touch</a>
+        <a class="btn-gold" onclick="go('experience')">See My Experience</a>
+        <a class="btn-outline" style="color:var(--white);border-color:rgba(255,255,255,0.35);" href="mailto:monilraval@gmail.com">Contact Me</a>
       </div>
       <div class="hero-chips">
-        <span class="chip">Amazon EU · Operations Associate</span>
+        <span class="chip">Amazon EU · Operations</span>
         <span class="chip">AGCO · Product Owner</span>
-        <span class="chip">Bosch · Change Management</span>
-        <span class="chip">AI Builder</span>
-        <span class="chip">Kaufbeuren, Germany</span>
+        <span class="chip">Bosch · Change Mgmt</span>
+        <span class="chip">MBA + MSc IT</span>
+        <span class="chip">German B1</span>
+        <span class="chip">Agile · Lean · KPI</span>
       </div>
     </div>
-    <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+    <div class="scroll-hint"><div class="scroll-line"></div><span>Explore</span></div>
   </section>
 
-  <div class="home-metrics">
-    <div class="hm"><div class="hm-num">40+</div><div class="hm-desc">Associates led in real-time EU fulfilment operations</div></div>
-    <div class="hm"><div class="hm-num">3</div><div class="hm-desc">Global enterprise platforms owned across multi-country rollouts</div></div>
-    <div class="hm"><div class="hm-num">2</div><div class="hm-desc">Master's degrees — IT Engineering & Operational Excellence MBA</div></div>
-    <div class="hm"><div class="hm-num">3+</div><div class="hm-desc">Years spanning operations, product, digital transformation & AI ventures</div></div>
+  <div class="metrics">
+    <div class="met"><div class="met-n">4</div><div class="met-d">Years of professional experience in Germany across 3 companies</div></div>
+    <div class="met"><div class="met-n">1</div><div class="met-d">Full product ownership cycle — PIM & E-Commerce across EU markets at AGCO</div></div>
+    <div class="met"><div class="met-n">2</div><div class="met-d">Master's degrees: MBA (Operational Excellence) + MSc Information Technology</div></div>
+    <div class="met"><div class="met-n">2</div><div class="met-d">Live AI projects on GitHub at the intersection of ops, product, and data</div></div>
   </div>
 
-  <div class="home-previews">
-    <div class="section-tag">Navigate</div>
-    <h2>Everything you need to <em>know about me.</em></h2>
-    <p class="home-previews-sub">Each section is a full page & click any card to explore, or use the navigation above.</p>
-    <div class="preview-grid">
-      <div class="preview-card" onclick="showPage('about')">
-        <div class="pc-icon">👤</div>
-        <div class="pc-title">About Me</div>
-        <p class="pc-desc">My story — from India to Germany, engineer to leader, employee to founder. Fun facts, skills, tools, and what actually drives me.</p>
-        <div class="pc-link">Explore ↗</div>
+  <div class="p1">
+    <div class="stag">Navigate</div>
+    <h2>Everything a recruiter or hiring<br>manager needs to <em>evaluate me.</em></h2>
+    <div class="nav-cards">
+      <div class="nc" onclick="go('about')">
+        <div class="nc-icon">👤</div>
+        <div class="nc-title">About Me</div>
+        <p class="nc-desc">My honest story — 4.5 years in Germany, dual Master's degrees, the path from IT to product thinking, and what I'm actively building toward.</p>
+        <div class="nc-link">Read More ↗</div>
       </div>
-      <div class="preview-card" onclick="showPage('experience')">
-        <div class="pc-icon">💼</div>
-        <div class="pc-title">Experience</div>
-        <p class="pc-desc">Amazon, AGCO, Bosch, and ClarusHorizon. Full detail on every role is what I owned, what I built, what changed.</p>
-        <div class="pc-link">Explore ↗</div>
+      <div class="nc" onclick="go('experience')">
+        <div class="nc-icon">💼</div>
+        <div class="nc-title">Experience</div>
+        <p class="nc-desc">Amazon EU operations, AGCO product ownership, Bosch change management — written in Google XYZ format with real context and honest scope.</p>
+        <div class="nc-link">See Experience ↗</div>
       </div>
-      <div class="preview-card" onclick="showPage('casestudies')">
-        <div class="pc-icon">📋</div>
-        <div class="pc-title">Case Studies</div>
-        <p class="pc-desc">Four deep-dives. Timeline, team, methodology, and measurable impact. The proof behind every claim on the CV.</p>
-        <div class="pc-link">Explore ↗</div>
+      <div class="nc" onclick="go('projects')">
+        <div class="nc-icon">🔬</div>
+        <div class="nc-title">Projects & Lab</div>
+        <p class="nc-desc">ShiftSense AI, PRD Generator, and three new projects in development that demonstrate product thinking, data analysis, and Lean methodology.</p>
+        <div class="nc-link">View Projects ↗</div>
       </div>
-      <div class="preview-card" onclick="showPage('whyme')">
-        <div class="pc-icon">🎯</div>
-        <div class="pc-title">Why Me</div>
-        <p class="pc-desc">Three reasons I'm built for the German market. Skills, differentiation, testimonials, and the honest case for hiring me.</p>
-        <div class="pc-link">Explore ↗</div>
+      <div class="nc" onclick="go('whyme')">
+        <div class="nc-icon">🎯</div>
+        <div class="nc-title">Why Me</div>
+        <p class="nc-desc">An honest, evidence-based answer to the question every hiring manager is actually asking — with skill profiling and a direct CTA for recruiters.</p>
+        <div class="nc-link">Read The Case ↗</div>
       </div>
-      <div class="preview-card" onclick="showPage('lab')">
-        <div class="pc-icon">🔬</div>
-        <div class="pc-title">Lab</div>
-        <p class="pc-desc">ShiftSense AI and PRD Generator are two live GitHub projects at the intersection of operations, product, and AI.</p>
-        <div class="pc-link">Explore ↗</div>
+      <div class="nc" onclick="window.open('https://github.com/monilraval','_blank')">
+        <div class="nc-icon">💻</div>
+        <div class="nc-title">GitHub Profile</div>
+        <p class="nc-desc">ShiftSense AI and PRD Generator — two open-source projects with clean READMEs, real problem statements, and working code.</p>
+        <div class="nc-link">View on GitHub ↗</div>
       </div>
-      <div class="preview-card" onclick="window.location.href='mailto:monilraval@gmail.com'">
-        <div class="pc-icon">✉️</div>
-        <div class="pc-title">Contact</div>
-        <p class="pc-desc">Open to consulting, operations leadership, and digital transformation roles. Based in Kaufbeuren — available globally.</p>
-        <div class="pc-link">Reach Out ↗</div>
+      <div class="nc" onclick="window.location.href='mailto:monilraval@gmail.com'">
+        <div class="nc-icon">✉️</div>
+        <div class="nc-title">Contact</div>
+        <p class="nc-desc">monilraval@gmail.com · LinkedIn: monilraval · Available for interviews immediately.</p>
+        <div class="nc-link">Get In Touch ↗</div>
       </div>
     </div>
   </div>
 
-  <footer class="site-footer">
-    <div class="footer-name">Monil Raval</div>
-    <div class="footer-links">
+  <div class="ft">
+    <div class="ft-name">Monil Raval</div>
+    <div class="ft-links">
       <a href="https://www.linkedin.com/in/monilraval" target="_blank">LinkedIn</a>
       <a href="https://github.com/monilraval" target="_blank">GitHub</a>
       <a href="mailto:monilraval@gmail.com">Email</a>
     </div>
-    <div class="footer-copy">© 2026 · Kaufbeuren, Germany</div>
-  </footer>
+    <div class="ft-copy">© 2026 · Kaufbeuren, Germany</div>
+  </div>
 </div>
 
-<!-- ══════════════════════════════════
-     PAGE: ABOUT
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════ -->
 <div class="page" id="page-about">
-  <div class="about-hero">
-    <div class="about-hero-tag">About Me</div>
-    <h1>More than <em>a résumé.</em></h1>
-    <p class="about-hero-sub">The story behind the CV — who I am, what drives me, and why I chose to build my career in Germany from the ground up.</p>
+  <div class="about-banner">
+    <div class="stag stag-white">About Me</div>
+    <h1>4 years in Germany.<br><em>Building toward product leadership.</em></h1>
+    <p>An honest profile — where I am today, what I've done, what I'm learning, and where I'm going.</p>
   </div>
 
-  <div class="pad">
-    <div class="about-story">
-      <div class="about-story-text">
-        <div class="section-tag">My Story</div>
-        <h2>From India to <em>Bavaria.</em></h2>
-        <div class="big-quote">"I left everything familiar to build something real."</div>
-        <p>I grew up in Rajkot, India, with an engineering mindset. always curious, always asking why things work the way they do, and whether they could work better. After completing my BSc and then my MSc in Information Technology, I had a choice: stay comfortable, or go somewhere the problems are harder and the stakes are higher.</p>
-        <p>I chose Germany. Not for a job that was handed to me, for a fundamentally different way of building a career. A culture that values Präzision, Gründlichkeit, and long-term thinking. I arrived speaking limited German, knowing almost nobody, and with a clear hypothesis: that someone with technical depth, operational instincts, and a genuine hunger to deliver could build something meaningful here.</p>
-        <p>That hypothesis has been validated three times over. At Bosch, I learned what enterprise change management looks like at scale. At AGCO, I learned what it means to own a product that affects multiple countries and thousands of users. At Amazon, I learned what real operational pressure looks like — and how to lead people through it without losing the thread of performance.</p>
-        <p>In parallel, I'm building. ClarusHorizon.com is my live experiment in what happens when you apply product methodology and AI tooling to a problem you're willing to iterate on for years. ShiftSense AI is my answer to a problem I see every shift on the Amazon floor. I'm not waiting for someone to give me the interesting problems — I'm creating them.</p>
+  <div class="p1">
+    <div class="honesty-box">
+      <div class="hb-label">📍 Honest Positioning</div>
+      <div class="hb-text">I am currently an L1 Operations Associate at Amazon EU — learning how world-class fulfilment operations work from the inside. My previous role was Product Owner at AGCO GmbH. I hold an MBA and MSc in IT. I am actively targeting Product Owner, Operations Analyst, and Digital Transformation roles where I can combine both dimensions.</div>
+    </div>
+    <div class="story-grid">
+      <div class="story-text">
+        <div class="stag">My Story</div>
+        <h2>From Surat to <em>Bavaria.</em></h2>
+        <div class="bq">"I chose Germany because the problems are harder and the stakes are higher."</div>
+        <p>I grew up in Surat, India, with an engineering mindset. After completing my BCA and then my MSc in Information Technology at GLS University, I had a deliberate choice to make: stay in a comfortable environment, or move to a country where precision, accountability, and long-term thinking are the minimum standard — not the aspiration.</p>
+        <p>I chose Germany. I arrived with limited German, no professional network, and a clear hypothesis: that someone with technical depth, a genuine interest in how organisations operate, and the discipline to keep improving could build something meaningful in the German market.</p>
+        <p>That hypothesis is being validated — slowly and honestly. At Bosch, I learned how enterprise change management works at scale. At AGCO, I owned a real product backlog for the first time and understood what it means to be accountable for a platform used across multiple countries. At Amazon, I'm experiencing how world-class operations actually function at the floor level — a perspective that most product managers never get.</p>
+        <p>In parallel, I'm building AI tools (ShiftSense AI, PRD Generator) and pushing my German from B1 toward B2. My career is 4 years old in Germany. The trajectory is deliberate and the destination is clear: Product Owner or Operations excellence roles where data, process, and stakeholder management intersect.</p>
       </div>
       <div>
-        <div class="section-tag">Quick Facts</div>
-        <div class="about-aside-block"><div class="aab-label">Current Location</div><div class="aab-text">Kaufbeuren, Bavaria, Germany · Open to relocation & remote</div></div>
-        <div class="about-aside-block"><div class="aab-label">Languages</div><div class="aab-text">English (Fluent) · German (B1, actively advancing) · Gujarati (Native) · Hindi</div></div>
-        <div class="about-aside-block"><div class="aab-label">Education</div><div class="aab-text">MBA & Engineering — Hof University (2024) · MSc IT — GLS University (2019) · BCA — VNSGU (2012)</div></div>
-        <div class="about-aside-block"><div class="aab-label">Work Status</div><div class="aab-text">Currently employed at Amazon EU · Open to strategic consulting & leadership opportunities</div></div>     
-        <div class="about-aside-block"><div class="aab-label">Email</div><div class="aab-text">monilraval@gmail.com</div></div>
+        <div class="stag">Quick Facts</div>
+        <div class="aside-block"><div class="ab-label">Target Roles</div><div class="ab-text">Product Owner · Business Analyst · Operations Analyst · Digital Transformation · Process Improvement</div></div>
+        <div class="aside-block"><div class="ab-label">Location</div><div class="ab-text">Kaufbeuren, Bavaria, Germany · Open to relocation within Germany · Open to hybrid/remote</div></div>
+        <div class="aside-block"><div class="ab-label">Languages</div><div class="ab-text">English (Fluent, C1) · German (B1 — active daily use, advancing) · Gujarati (Native) · Hindi</div></div>
+        <div class="aside-block"><div class="ab-label">Education</div><div class="ab-text">MBA Engineering — Hof University 2024 · MSc IT — GLS University 2019 · BCA — VNSGU 2012</div></div>
+        <div class="aside-block"><div class="ab-label">Availability</div><div class="ab-text">Available for interviews immediately · Notice period negotiable · Open to part-time project work</div></div>
+        <div class="aside-block"><div class="ab-label">Contact</div><div class="ab-text">monilraval@gmail.com · +49 176 471 76978 · linkedin.com/in/monilraval</div></div>
       </div>
     </div>
   </div>
 
-  <div class="pad-card">
-    <div class="section-tag">Fun Facts & What Drives Me</div>
-    <h2>The person <em>behind the work.</em></h2>
-    <div class="fun-facts-grid">
-      <div class="ff"><div class="ff-icon">✈️</div><div class="ff-title">Moved Countries for Growth</div><div class="ff-text">Relocated from India to Germany by deliberate choice. Learned a new language, a new professional culture, and a new set of rules for what "good work" looks like. Currently at B1 German, targeting B2 by end of 2027.</div></div>
-      <div class="ff"><div class="ff-icon">🤖</div><div class="ff-title">AI-Obsessed Builder</div><div class="ff-text">Not just a reader of AI trend reports. I build with the tools. ClarusHorizon.com uses AI-assisted content workflows. ShiftSense AI applies machine learning to a real operational problem I face every shift. Real experiments, real data.</div></div>
-      <div class="ff"><div class="ff-icon">⚙️</div><div class="ff-title">Engineer Turned Leader</div><div class="ff-text">Started my career in IT with code and systems thinking. Discovered that the highest-leverage skill isn't writing better algorithms — it's building better teams and processes that outlast any individual contribution.</div></div>
-      <div class="ff"><div class="ff-icon">📊</div><div class="ff-title">Data Before Gut</div><div class="ff-text">Every initiative I run starts with: "What does the data say?" The discipline to override intuition with evidence — and then act decisively once the evidence is clear.  is something I've practiced across operations, product, and ventures.</div></div>
-      <div class="ff ff-wide"><div class="ff-icon">🌍</div><div class="ff-title">Global by Design</div><div class="ff-text">I've worked inside Indian, German, and pan-European business cultures simultaneously — managing stakeholders from Stuttgart boardrooms, Bavarian factory floors, and international vendor teams. I understand how decisions travel differently across organisations and how to make things move in each context.</div></div>
-    </div>
-  </div>
-
-  <div class="pad">
-    <div class="section-tag">Skills & Tools</div>
-    <h2>What I bring <em>to the table.</em></h2>
-    <div class="skills-section">
-      <div class="skill-block">
-        <div class="sb-title">Operations & Process</div>
-        <div class="sb-items">
-          <div class="sb-item">Lean Manufacturing & Six Sigma</div>
-          <div class="sb-item">KPI Design & Performance Management</div>
-          <div class="sb-item">Real-Time Bottleneck Analysis</div>
-          <div class="sb-item">Shift Planning & Workforce Optimisation</div>
-          <div class="sb-item">Safety & Quality Management Systems</div>
-          <div class="sb-item">Continuous Improvement (Kaizen)</div>
+  <div class="p2">
+    <div class="stag">Skills — Grouped by Relevance</div>
+    <h2>What I bring, <em>honestly assessed.</em></h2>
+    <div class="skills-grid">
+      <div class="sg">
+        <div class="sg-title">Product Management</div>
+        <div class="sg-items">
+          <div class="sg-item">Product backlog ownership (Jira)</div>
+          <div class="sg-item">User story writing & acceptance criteria</div>
+          <div class="sg-item">Sprint planning & release management</div>
+          <div class="sg-item">Stakeholder requirement gathering</div>
+          <div class="sg-item">Roadmap communication</div>
+          <div class="sg-item">MoSCoW & RICE prioritisation</div>
         </div>
       </div>
-      <div class="skill-block">
-        <div class="sb-title">Digital & Product</div>
-        <div class="sb-items">
-          <div class="sb-item">Agile / Scrum / Kanban</div>
-          <div class="sb-item">Product Backlog & Roadmap Ownership</div>
-          <div class="sb-item">User Story Writing & Epics</div>
-          <div class="sb-item">SaaS Platform Management</div>
-          <div class="sb-item">E-Commerce & PIM Systems</div>
-          <div class="sb-item">Change Management & Governance</div>
+      <div class="sg">
+        <div class="sg-title">Operations & Process</div>
+        <div class="sg-items">
+          <div class="sg-item">KPI tracking & performance analysis</div>
+          <div class="sg-item">Lean & continuous improvement (Kaizen)</div>
+          <div class="sg-item">Root cause analysis (5-Why, A3)</div>
+          <div class="sg-item">Shift planning & workforce coordination</div>
+          <div class="sg-item">Standard operating procedure design</div>
+          <div class="sg-item">Safety & quality system management</div>
         </div>
       </div>
-      <div class="skill-block">
-        <div class="sb-title">Analytics & AI</div>
-        <div class="sb-items">
-          <div class="sb-item">Power BI & Excel (Advanced)</div>
-          <div class="sb-item">KPI Dashboards & Data Storytelling</div>
-          <div class="sb-item">AI Workflow Design & Automation</div>
-          <div class="sb-item">Python (Data & ML — Applied)</div>
-          <div class="sb-item">API Integrations & Automation</div>
-          <div class="sb-item">Hypothesis-Driven Analysis</div>
+      <div class="sg">
+        <div class="sg-title">Data & Analytics</div>
+        <div class="sg-items">
+          <div class="sg-item">Excel (advanced: pivot, Power Query)</div>
+          <div class="sg-item">Power BI dashboards (working knowledge)</div>
+          <div class="sg-item">KPI definition & measurement design</div>
+          <div class="sg-item">Python — data analysis (learning)</div>
+          <div class="sg-item">Hypothesis-driven thinking</div>
+          <div class="sg-item">Data storytelling for stakeholders</div>
         </div>
       </div>
-      <div class="skill-block">
-        <div class="sb-title">Tools & Platforms</div>
-        <div class="sb-items">
-          <div class="sb-item">Jira & Confluence</div>
-          <div class="sb-item">SAP / PIM Enterprise Systems</div>
-          <div class="sb-item">Microsoft Office Suite (Expert)</div>
-          <div class="sb-item">GitHub & Version Control</div>
-          <div class="sb-item">AI Tools (Claude, GPT, Cursor)</div>
-          <div class="sb-item">Google Analytics & Tag Manager</div>
+      <div class="sg">
+        <div class="sg-title">Agile & Delivery</div>
+        <div class="sg-items">
+          <div class="sg-item">Scrum framework (daily, retro, review)</div>
+          <div class="sg-item">Kanban & WIP management</div>
+          <div class="sg-item">Cross-functional team coordination</div>
+          <div class="sg-item">Vendor & external partner management</div>
+          <div class="sg-item">Change management & adoption</div>
+          <div class="sg-item">Documentation & governance</div>
         </div>
       </div>
-      <div class="skill-block">
-        <div class="sb-title">Leadership</div>
-        <div class="sb-items">
-          <div class="sb-item">Cross-Functional Team Leadership</div>
-          <div class="sb-item">Stakeholder Management (C-Suite)</div>
-          <div class="sb-item">Vendor & Partner Coordination</div>
-          <div class="sb-item">Coaching & Performance Development</div>
-          <div class="sb-item">Cross-Cultural Communication</div>
-          <div class="sb-item">Decision-Making Under Ambiguity</div>
+      <div class="sg">
+        <div class="sg-title">Tools & Platforms</div>
+        <div class="sg-items">
+          <div class="sg-item">Jira & Confluence (daily use at AGCO)</div>
+          <div class="sg-item">SAP & PIM enterprise systems</div>
+          <div class="sg-item">Microsoft Office 365 (Expert)</div>
+          <div class="sg-item">GitHub & version control</div>
+          <div class="sg-item">AI tools: Claude, GPT, Cursor</div>
+          <div class="sg-item">Google Analytics (basic)</div>
         </div>
       </div>
-      <div class="skill-block">
-        <div class="sb-title">Frameworks</div>
-        <div class="sb-items">
-          <div class="sb-item">OKRs & Strategic Planning</div>
-          <div class="sb-item">Design Thinking</div>
-          <div class="sb-item">PDCA Improvement Cycles</div>
-          <div class="sb-item">MoSCoW Prioritisation</div>
-          <div class="sb-item">Business Case Development</div>
-          <div class="sb-item">Risk Assessment & Mitigation</div>
+      <div class="sg">
+        <div class="sg-title">Soft Skills (German Context)</div>
+        <div class="sg-items">
+          <div class="sg-item">Structured, precise communication</div>
+          <div class="sg-item">Cross-cultural stakeholder management</div>
+          <div class="sg-item">Accountability & ownership mindset</div>
+          <div class="sg-item">Ambiguity tolerance & self-direction</div>
+          <div class="sg-item">Feedback-seeking & iterative improvement</div>
+          <div class="sg-item">Reliability in high-pressure environments</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="pad-card">
-    <div class="section-tag">Education & Certifications</div>
-    <h2>The foundation of <em>rigorous thinking.</em></h2>
-    <div class="certs-grid" style="margin-bottom:3rem;">
-      <div class="cert-card">
-        <div class="cert-name">MBA & Engineering — IT & Operational Excellence</div>
-        <div class="cert-issuer">Hof University of Applied Sciences</div>
-        <div class="cert-date">Hof, Germany · 2024 · Dual Degree (Engineering + MBA)</div>
+  <div class="p3">
+    <div class="stag stag-white">Education</div>
+    <h2 style="color:var(--white)">The academic <em style="color:rgba(255,255,255,0.35)">foundation.</em></h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-deg">MBA & Engineering — IT & Operational Excellence</div>
+        <div class="edu-school">Hof University of Applied Sciences</div>
+        <div class="edu-year">Hof, Germany · 2024 · Dual Degree</div>
       </div>
-      <div class="cert-card">
-        <div class="cert-name">MSc in Information Technology</div>
-        <div class="cert-issuer">GLS University</div>
-        <div class="cert-date">Ahmedabad, India · 2019</div>
+      <div class="edu-card">
+        <div class="edu-deg">MSc in Information Technology</div>
+        <div class="edu-school">GLS University</div>
+        <div class="edu-year">Ahmedabad, India · 2019</div>
       </div>
-      <div class="cert-card">
-        <div class="cert-name">BCA — Computer Applications</div>
-        <div class="cert-issuer">Veer Narmad South Gujarat University</div>
-        <div class="cert-date">Surat, India · 2012</div>
-      </div>
-    </div>
-    <div class="section-tag">Relevant Certifications & Training</div>
-    <div class="certs-grid">
-      <div class="cert-card">
-        <div class="cert-name">Agile & Scrum Product Ownership</div>
-        <div class="cert-issuer">Professional Development Training</div>
-        <div class="cert-date">Applied at AGCO GmbH · 2023–2024</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-name">Lean Six Sigma Foundations</div>
-        <div class="cert-issuer">Process Excellence Training</div>
-        <div class="cert-date">Applied at Amazon EU · 2024–Present</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-name">Change Management Fundamentals</div>
-        <div class="cert-issuer">Enterprise Change Enablement</div>
-        <div class="cert-date">Applied at Robert Bosch GmbH · 2022–2023</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-name">AI & Machine Learning for Operations</div>
-        <div class="cert-issuer">Self-directed + Applied Learning</div>
-        <div class="cert-date">Ongoing · ShiftSense AI Project</div>
+      <div class="edu-card">
+        <div class="edu-deg">BCA — Bachelor of Computer Applications</div>
+        <div class="edu-school">Veer Narmad South Gujarat University</div>
+        <div class="edu-year">Surat, India · 2012</div>
       </div>
     </div>
   </div>
 
-  <footer class="site-footer">
-    <div class="footer-name">Monil Raval</div>
-    <div class="footer-links">
+  <div class="ft">
+    <div class="ft-name">Monil Raval</div>
+    <div class="ft-links">
       <a href="https://www.linkedin.com/in/monilraval" target="_blank">LinkedIn</a>
       <a href="https://github.com/monilraval" target="_blank">GitHub</a>
       <a href="mailto:monilraval@gmail.com">Email</a>
     </div>
-    <div class="footer-copy">© 2026 · Kaufbeuren, Germany</div>
-  </footer>
+    <div class="ft-copy">© 2026 · Kaufbeuren, Germany</div>
+  </div>
 </div>
 
-<!-- ══════════════════════════════════
-     PAGE: EXPERIENCE
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════
+     EXPERIENCE PAGE
+══════════════════════════════════════ -->
 <div class="page" id="page-experience">
-  <div class="exp-hero">
-    <div class="section-tag" style="color:var(--accent);">Work Experience</div>
-    <h1>A career built on <em>execution at scale.</em></h1>
-    <p class="exp-hero-sub">Four roles across Amazon, AGCO, Bosch, and my own venture. Each one added a dimension in operations depth, product ownership, change leadership, and entrepreneurial rigour.</p>
+  <div class="exp-banner">
+    <div class="stag stag-white">Work Experience</div>
+    <h1>4 years. 3 companies.<br><em>One clear direction.</em></h1>
+    <p class="exp-banner p" style="font-size:0.97rem;color:rgba(255,255,255,0.5);max-width:540px;line-height:1.88;margin-top:0.5rem;">Written in Google XYZ format: Accomplished [X], measured by [Y], by doing [Z]. Honest scope, honest titles, real context.</p>
   </div>
 
-  <div class="pad">
+  <div class="p1">
+
+    <!-- AMAZON -->
     <div class="exp-item">
-      <div class="exp-meta">
+      <div>
         <div class="exp-co">Amazon</div>
         <div class="exp-date">Dec 2024 – Present</div>
-        <div class="exp-loc">Graben, Bavaria, DE</div>
+        <div class="exp-loc">Graben, Bavaria, Germany</div>
+        <div class="exp-level">Operations Associate</div>
+        <div class="path-box">
+          <div class="path-label">📈 Career Path Context</div>
+          <div class="path-text">Deliberately joined Amazon at associate level to experience world-class fulfilment operations from the ground up — building the operational credibility that most product managers lack. This is a strategic step toward Operations Analyst or Senior PO roles that require deep understanding of physical operations.</div>
+        </div>
       </div>
       <div>
-        <div class="exp-role">Operations Associate — Amazon EU</div>
-        <div class="exp-body">
-          <p>Leads teams of 20–40 associates across one of Europe's most demanding fulfilment environments. Owns throughput, quality, and safety KPIs across every shift — identifying bottleneck patterns in real time and deploying corrective systems before they compound into larger failures.</p>
-          <p>Operates at the precise intersection of people leadership and data-driven process management. The work requires holding both simultaneously: coaching a team lead on decision-making at 6am, reviewing KPI trend data at 8am, and presenting corrective action plans to senior operations management by noon — all while the floor is still running.</p>
-        </div>
-        <div class="exp-highlights">
-          <div class="exp-hi">Led and coached 20–40 associates in a high-pressure, real-time EU fulfilment operation maintaining top-tier throughput and safety KPIs</div>
-          <div class="exp-hi">Identified 3 recurring bottleneck patterns through structured data analysis and resolved each within a 60-day corrective action cycle</div>
-          <div class="exp-hi">Implemented a structured daily stand-up cadence with direct feedback loops — shifting team culture from reactive firefighting to proactive problem-solving</div>
-          <div class="exp-hi">Deployed corrective action frameworks with named ownership and 48-hour review cycles, removing ambiguity about accountability across every process layer</div>
-          <div class="exp-hi">Maintained zero safety incidents under direct supervision through rigorous pre-shift briefings and real-time hazard identification protocols</div>
-          <div class="exp-hi">Coached team leads on anticipatory decision-making — equipping them to act on early signals rather than waiting for escalation triggers</div>
+        <div class="exp-role">Operations Associate — Fulfilment Centre, Amazon EU</div>
+        <div class="exp-context">Amazon EU fulfilment operates under some of the most demanding throughput, quality, and safety standards in global logistics. Working at L1 level means direct exposure to real-time KPI management, process adherence, and the operational mechanics that product and data teams build tools for.</div>
+        <div class="exp-xyz">
+          <div class="xyz"><strong>Improved personal productivity metrics</strong> by consistently applying standard work procedures and identifying micro-inefficiencies in pick-pack workflows — contributing to station-level throughput targets across multiple shift types.</div>
+          <div class="xyz"><strong>Developed working knowledge of Amazon's operational KPI framework</strong> (units per hour, defect rates, scan compliance) by tracking my own and observing team-level data reviewed in daily stand-ups — building the data literacy that underpins ShiftSense AI.</div>
+          <div class="xyz"><strong>Observed and documented 3 recurring process bottlenecks</strong> in shift handover procedures and inbound receiving workflows — forming the basis of a structured A3 improvement analysis (see Projects page).</div>
+          <div class="xyz"><strong>Demonstrated reliability and process discipline</strong> across 400+ shifts in a safety-critical environment — building the operational credibility needed to speak with authority about warehouse operations in product and data roles.</div>
+          <div class="xyz"><strong>Actively studying Amazon's internal operational excellence frameworks</strong> (Kaizen events, Andon cord usage, 5S methodology) to accelerate transition toward Operations Analyst or Area Manager path.</div>
         </div>
         <div class="tags">
-          <span class="tag">Operations Excellence</span><span class="tag">KPI Management</span><span class="tag">Team Leadership</span><span class="tag">Lean Problem-Solving</span><span class="tag">Safety Systems</span><span class="tag">Data Analysis</span>
+          <span class="tag">Fulfilment Operations</span><span class="tag">KPI Tracking</span><span class="tag">Process Adherence</span><span class="tag">Lean Basics</span><span class="tag">Safety Compliance</span><span class="tag">Shift Work</span>
         </div>
       </div>
     </div>
 
+    <!-- AGCO -->
     <div class="exp-item">
-      <div class="exp-meta">
+      <div>
         <div class="exp-co">AGCO GmbH</div>
-        <div class="exp-date">2023 – 2024</div>
-        <div class="exp-loc">Marktoberdorf, Bavaria, DE</div>
+        <div class="exp-date">2023 – 2024 · ~10 months</div>
+        <div class="exp-loc">Marktoberdorf, Bavaria, Germany</div>
+        <div class="exp-level">Product Owner (Full-Time)</div>
       </div>
       <div>
-        <div class="exp-role">Product Owner — PIM & E-Commerce</div>
-        <div class="exp-body">
-          <p>Owned the entire product backlog for enterprise Product Information Management and e-commerce platforms deployed across multiple European markets. Served as the single coordination point between IT engineering, international business units, and external development vendors — translating ambiguous, competing requirements into delivery plans that teams could actually execute.</p>
-          <p>The central challenge: different country business units had fundamentally different definitions of "complete." My role was to build a shared language of priority, ship consistently, and ensure the platform improved product data quality measurably rather than just adding features.</p>
-        </div>
-        <div class="exp-highlights">
-          <div class="exp-hi">Owned and prioritised the full product backlog for PIM and e-commerce platforms used across multiple European countries — hundreds of user stories across 12 months</div>
-          <div class="exp-hi">Translated complex, competing business requirements from multiple country teams into structured epics, user stories, and sprint delivery plans in Jira</div>
-          <div class="exp-hi">Coordinated weekly cross-functional syncs between IT, external vendors, and 4+ country business units — maintaining delivery cadence and removing blockers before they became delays</div>
-          <div class="exp-hi">Drove data governance improvements that established consistent product data standards, enabling accurate product visibility across all digital channels for the first time</div>
-          <div class="exp-hi">Delivered multi-country platform releases on schedule by maintaining a clear release plan that all three stakeholder groups trusted and worked from</div>
-          <div class="exp-hi">Enabled measurable improvements in digital process efficiency and product discoverability across AGCO's European e-commerce channels</div>
+        <div class="exp-role">Product Owner — PIM & E-Commerce Platform</div>
+        <div class="exp-context">AGCO is a global agricultural equipment manufacturer (Fendt, Challenger, Massey Ferguson). As Product Owner, I was accountable for the digital product backlog that governed how product data was managed and presented across European e-commerce channels — directly affecting dealer and customer-facing systems.</div>
+        <div class="exp-xyz">
+          <div class="xyz"><strong>Owned and maintained a live product backlog of ~120 user stories</strong> for a PIM platform used across 5 European country teams — prioritising using MoSCoW methodology aligned with quarterly business objectives and IT capacity.</div>
+          <div class="xyz"><strong>Reduced average sprint planning time by approximately 30%</strong> by introducing structured requirement templates and a pre-sprint refinement process — eliminating the ambiguity that caused recurring mid-sprint scope changes.</div>
+          <div class="xyz"><strong>Coordinated weekly cross-functional delivery syncs</strong> between IT engineering (8 people), 4 country business stakeholders, and 2 external vendors — maintaining a release cadence that delivered on schedule for 3 consecutive quarters.</div>
+          <div class="xyz"><strong>Drove a data governance initiative</strong> that standardised product attribute taxonomy across 5 country systems, reducing data inconsistency errors (estimated ~40% reduction based on pre/post data quality audit) and improving product findability on e-commerce channels.</div>
+          <div class="xyz"><strong>Translated complex regulatory and market-specific requirements</strong> from German, French, and UK business units into actionable user stories with clear acceptance criteria — serving as the primary communication bridge between business and engineering.</div>
+          <div class="xyz"><strong>Delivered 3 platform releases across a 10-month roadmap</strong>, each on schedule and within agreed scope, covering features used by dealer networks across multiple European markets.</div>
         </div>
         <div class="tags">
-          <span class="tag">Product Ownership</span><span class="tag">Agile Delivery</span><span class="tag">Jira & Confluence</span><span class="tag">E-Commerce</span><span class="tag">Data Governance</span><span class="tag">Stakeholder Management</span><span class="tag">PIM Systems</span>
+          <span class="tag">Product Ownership</span><span class="tag">Backlog Management</span><span class="tag">Agile / Scrum</span><span class="tag">Jira & Confluence</span><span class="tag">PIM Systems</span><span class="tag">E-Commerce</span><span class="tag">Stakeholder Management</span><span class="tag">Data Governance</span>
         </div>
       </div>
     </div>
 
+    <!-- BOSCH -->
     <div class="exp-item">
-      <div class="exp-meta">
+      <div>
         <div class="exp-co">Robert Bosch GmbH</div>
-        <div class="exp-date">2022 – 2023</div>
-        <div class="exp-loc">Stuttgart, Baden-Württemberg, DE</div>
+        <div class="exp-date">2022 – 2023 · ~6 months</div>
+        <div class="exp-loc">Stuttgart, Baden-Württemberg, Germany</div>
+        <div class="exp-level">Working Student / Intern — Agile PM</div>
       </div>
       <div>
         <div class="exp-role">Agile Project Management & Change Enablement</div>
-        <div class="exp-body">
-          <p>Embedded within Finance & Operations at one of Germany's largest and most complex organisations to ensure a major enterprise SaaS rollout didn't become another statistic in the long list of failed enterprise implementations. The technology worked — the challenge was making 10,000 people actually use it.</p>
-          <p>Built the infrastructure that made adoption possible: governance frameworks, role-specific documentation, user enablement programmes, and the stakeholder communication machinery that moved people from active resistance to visible adoption — including senior leaders with strong institutional objections.</p>
-        </div>
-        <div class="exp-highlights">
-          <div class="exp-hi">Supported global rollout of enterprise SaaS tools across Finance & Operations at one of the world's top 3 engineering companies</div>
-          <div class="exp-hi">Built end-to-end governance frameworks covering access management, escalation pathways, and platform usage standards — embedded permanently as operating procedure</div>
-          <div class="exp-hi">Developed role-specific process documentation, user guides, and enablement materials tailored to distinct user groups across multiple countries</div>
-          <div class="exp-hi">Mapped global stakeholder landscape to identify resistance points and adoption risks months before they would have become critical rollout blockers</div>
-          <div class="exp-hi">Executed structured change management communication campaigns that moved senior stakeholders from resistance to visible, sustained adoption</div>
-          <div class="exp-hi">Delivered the project on timeline with governance infrastructure that outlasted the project team and became the permanent platform standard</div>
+        <div class="exp-context">Bosch Finance & Operations was rolling out an enterprise SaaS platform to thousands of users across multiple countries. My role was to support the change management and user enablement workstream — creating the documentation, governance, and communication infrastructure that made adoption possible.</div>
+        <div class="exp-xyz">
+          <div class="xyz"><strong>Created 15+ process documentation artefacts</strong> (user guides, SOPs, FAQ documents, training materials) tailored to 4 distinct user role groups — reducing the time-to-competency for new platform users across 3 country teams.</div>
+          <div class="xyz"><strong>Supported a stakeholder communication programme</strong> that covered 200+ internal users across Finance and Operations — coordinating email campaigns, Q&A sessions, and feedback collection loops that fed into platform iteration decisions.</div>
+          <div class="xyz"><strong>Built the access management governance framework</strong> (role-based access matrix, request-approval workflow, audit trail process) that became the permanent operating standard for the platform post-go-live.</div>
+          <div class="xyz"><strong>Mapped resistance patterns across 5 stakeholder groups</strong> using structured interview feedback, enabling the project lead to address adoption blockers 6 weeks before they would have impacted the go-live timeline.</div>
+          <div class="xyz"><strong>Supported Agile sprint ceremonies</strong> (daily standups, sprint reviews, retrospectives) within the delivery team — building practical Scrum methodology knowledge alongside theoretical training.</div>
         </div>
         <div class="tags">
-          <span class="tag">Change Management</span><span class="tag">SaaS Rollout</span><span class="tag">Governance</span><span class="tag">Process Documentation</span><span class="tag">User Enablement</span><span class="tag">Stakeholder Communication</span>
+          <span class="tag">Change Management</span><span class="tag">SaaS Rollout</span><span class="tag">Documentation</span><span class="tag">Governance</span><span class="tag">Agile / Scrum</span><span class="tag">Stakeholder Communication</span><span class="tag">User Enablement</span>
         </div>
       </div>
     </div>
 
+    <!-- CLARUSHORIZON -->
     <div class="exp-item">
-      <div class="exp-meta">
+      <div>
         <div class="exp-co">ClarusHorizon.com</div>
         <div class="exp-date">2025 – Present</div>
-        <div class="exp-loc">Remote · Germany</div>
+        <div class="exp-loc">Side Project · Remote · Germany</div>
+        <div class="exp-level">Founder (Side Project)</div>
       </div>
       <div>
-        <div class="exp-role">Founder & Product Lead</div>
-        <div class="exp-body">
-          <p>Builds and operates a SaaS-based multi-niche affiliate platform from zero. Applies the same product rigour, data discipline, and operational mindset from corporate environments to a solo founder context — validating hypotheses before building, iterating based on user behaviour data, and using AI tooling to scale output without proportional cost growth.</p>
-          <p>ClarusHorizon is not a side project. it's a live proof-of-concept for the thesis that operations thinking + product methodology + AI tooling, in the right hands, can build things that were previously only possible with teams.</p>
-        </div>
-        <div class="exp-highlights">
-          <div class="exp-hi">Owns the full product lifecycle end-to-end: problem validation → MVP definition → development → launch → iteration — without external funding or a team</div>
-          <div class="exp-hi">Built AI-assisted content and SEO workflows that scale output 10x without proportional increase in time or cost</div>
-          <div class="exp-hi">Integrates user behaviour analytics into weekly product decisions — every feature prioritised by data signal, not assumption</div>
-          <div class="exp-hi">Wired API integrations for affiliate tracking, engagement automation, and SEO monitoring — building a scalable technical architecture independently</div>
-          <div class="exp-hi">Demonstrates first-hand mastery of the AI tools, product frameworks, and growth levers most organisations are still trying to understand theoretically</div>
+        <div class="exp-role">Founder — AI-Assisted Content SaaS Platform</div>
+        <div class="exp-context">A side project — not a full-time venture. A multi-niche affiliate platform built to practise product methodology, AI tooling, and growth analytics in a live environment where the stakes are real (actual users, actual revenue signals, actual iteration decisions). Deliberately kept separate from my core career positioning.</div>
+        <div class="exp-xyz">
+          <div class="xyz"><strong>Applied full product lifecycle methodology</strong> from problem validation through MVP to live iteration — using the same frameworks (user stories, acceptance criteria, prioritisation scoring) practised at AGCO in a solo-founder context.</div>
+          <div class="xyz"><strong>Built AI-assisted content workflows</strong> using LLM APIs and automation tools — reducing content production time by ~70% while maintaining quality, demonstrating practical AI tooling skills relevant to product and operations roles.</div>
+          <div class="xyz"><strong>Implemented user behaviour analytics</strong> (Google Analytics 4, heatmaps) and use weekly data to make feature and content prioritisation decisions — the same data-first discipline I aim to bring to product and operations analytics roles.</div>
         </div>
         <div class="tags">
-          <span class="tag">Entrepreneurship</span><span class="tag">Product Strategy</span><span class="tag">AI Workflows</span><span class="tag">Growth Analytics</span><span class="tag">API Integration</span><span class="tag">Automation</span><span class="tag">SEO</span>
+          <span class="tag">Product Thinking</span><span class="tag">AI Workflows</span><span class="tag">Analytics</span><span class="tag">Side Project</span>
         </div>
       </div>
     </div>
   </div>
 
-  <footer class="site-footer">
-    <div class="footer-name">Monil Raval</div>
-    <div class="footer-links">
+  <div class="ft">
+    <div class="ft-name">Monil Raval</div>
+    <div class="ft-links">
       <a href="https://www.linkedin.com/in/monilraval" target="_blank">LinkedIn</a>
       <a href="https://github.com/monilraval" target="_blank">GitHub</a>
       <a href="mailto:monilraval@gmail.com">Email</a>
     </div>
-    <div class="footer-copy">© 2026 · Kaufbeuren, Germany</div>
-  </footer>
+    <div class="ft-copy">© 2026 · Kaufbeuren, Germany</div>
+  </div>
 </div>
 
-<!-- ══════════════════════════════════
-     PAGE: CASE STUDIES
-══════════════════════════════════ -->
-<div class="page" id="page-casestudies">
-  <div class="cs-hero">
-    <div class="section-tag" style="color:var(--accent);">Case Studies</div>
-    <h1>How I <em>actually work.</em></h1>
-    <p class="cs-hero-sub">Four real projects. Real teams, real timelines, real pressure. This is what my work looks like from the inside, not the polished version, but the actual methodology, decisions, and outcomes.</p>
+<!-- ══════════════════════════════════════
+     PROJECTS PAGE
+══════════════════════════════════════ -->
+<div class="page" id="page-projects">
+  <div class="proj-banner">
+    <div class="stag stag-white">Projects & Lab</div>
+    <h1>Proof of <em>product thinking.</em></h1>
+    <p class="proj-banner p" style="font-size:0.97rem;color:rgba(255,255,255,0.5);max-width:560px;line-height:1.88;margin-top:0.5rem;">Each project starts with a real problem I've personally observed — not a portfolio exercise. Two are live on GitHub. Three are in active development based on the mentor feedback I received.</p>
   </div>
 
-  <div class="cs-list">
-    <!-- CS 1: Amazon -->
-    <div class="cs-full">
-      <div class="cs-full-inner">
-        <div>
-          <div class="cs-num">01</div>
-          <div class="cs-company">Amazon EU · Dec 2024 – Present</div>
-          <div class="cs-title-full">Turning a High-Pressure Fulfilment Floor into a High-Performance Team</div>
-          <p class="cs-summary">Inherited a team operating under relentless throughput pressure with no structured feedback loops, no named accountability, and a culture of reactive firefighting. KPIs were declining. The challenge: rebuild performance systems without slowing operations that cannot afford to stop — and do it in real time, with real people, every shift.</p>
-          <div class="cs-meta-bar">
-            <div class="cs-meta-item"><div class="cs-meta-label">Timeline</div><div class="cs-meta-val">Dec 2024 – Present</div></div>
-            <div class="cs-meta-item"><div class="cs-meta-label">Team Size</div><div class="cs-meta-val">20–40 Associates + Team Leads</div></div>
-            <div class="cs-meta-item"><div class="cs-meta-label">My Role</div><div class="cs-meta-val">Operations Associate (Full Accountability)</div></div>
-          </div>
+  <div class="p1">
+    <div class="stag">Live Projects — On GitHub</div>
+    <h2>Built and <em>deployed.</em></h2>
+    <div class="proj-grid" style="margin-bottom:3.5rem;">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <div class="proj-type">AI · Operations · Predictive</div>
+          <a href="https://github.com/monilraval/shiftsense-ai" target="_blank" class="proj-gh">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub ↗
+          </a>
         </div>
-        <div>
-          <div class="cs-right-head">Research Phase — What I Found</div>
-          <div class="cs-steps-full">
-            <div class="cs-step-full"><div class="cs-step-n">01</div><div class="cs-step-t">Mapped all KPI data going back 90 days — identified 3 recurring bottleneck patterns in shift handovers that nobody had formally named or owned.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">02</div><div class="cs-step-t">Conducted 1:1s with every team lead to understand where accountability gaps actually lived versus where they were assumed to live.</div></div>
-          </div>
-          <div class="cs-right-head">Build Phase — What I Did</div>
-          <div class="cs-steps-full">
-            <div class="cs-step-full"><div class="cs-step-n">03</div><div class="cs-step-t">Implemented structured daily stand-up cadence with direct feedback loops replacing ad-hoc communication with consistent signal.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">04</div><div class="cs-step-t">Deployed corrective action frameworks with named ownership and 48-hour review cycles — removing all ambiguity about who owns what.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">05</div><div class="cs-step-t">Coached team leads on anticipatory decision-making, shifting culture from reactive firefighting to proactive problem prevention, one shift at a time.</div></div>
-          </div>
-          <div class="cs-right-head" style="margin-top:1.5rem;">Impact</div>
-          <div class="cs-impacts-full">
-            <div class="cs-impact-full"><div class="ci-num">↑ KPIs</div><div class="ci-text">Consistent upward trend in throughput, quality & safety</div></div>
-            <div class="cs-impact-full"><div class="ci-num">40+</div><div class="ci-text">Associates operating under clearer accountability</div></div>
-            <div class="cs-impact-full"><div class="ci-num">3</div><div class="ci-text">Bottleneck patterns resolved within 60 days</div></div>
-            <div class="cs-impact-full"><div class="ci-num">0</div><div class="ci-text">Safety incidents under direct supervision</div></div>
-          </div>
+        <div class="proj-title">ShiftSense AI</div>
+        <div class="proj-problem">Problem Statement</div>
+        <p class="proj-desc">Warehouse shift leads make staffing decisions using lagging KPI reports and gut feel. There is no lightweight tool that translates historical shift patterns into next-shift demand predictions — causing understaffing spikes and throughput dips that are entirely predictable with basic data modelling. I observe this problem daily at Amazon EU.</p>
+        <div class="proj-stack">
+          <span class="proj-stag">Python</span><span class="proj-stag">Machine Learning</span><span class="proj-stag">Predictive Modelling</span><span class="proj-stag">Operations Data</span><span class="proj-stag">Streamlit</span>
         </div>
+        <div class="proj-impact"><span>Relevance to target roles:</span> Demonstrates applied data analysis, hypothesis-driven problem solving, and the rare ability to understand both the operational problem and the data solution — the combination Product Owners in logistics and operations tech need.</div>
+        <a href="https://github.com/monilraval/shiftsense-ai" target="_blank" class="proj-btn">View on GitHub ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <div class="proj-type">AI · Product Management · Automation</div>
+          <a href="https://github.com/monilraval/PRD-Generator" target="_blank" class="proj-gh">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub ↗
+          </a>
+        </div>
+        <div class="proj-title">PRD Generator</div>
+        <div class="proj-problem">Problem Statement</div>
+        <p class="proj-desc">Product Owners spend 2–3 hours per PRD on boilerplate structure that doesn't require creative thinking — objective, scope, acceptance criteria, technical notes. This tool generates a complete, structured PRD from a plain-language feature description in under 5 minutes, freeing PO time for actual prioritisation decisions. Built directly from frustration at AGCO.</p>
+        <div class="proj-stack">
+          <span class="proj-stag">LLM / AI</span><span class="proj-stag">Prompt Engineering</span><span class="proj-stag">Product Documentation</span><span class="proj-stag">Workflow Automation</span>
+        </div>
+        <div class="proj-impact"><span>Relevance to target roles:</span> Shows I understand the PO workflow deeply enough to automate the boring parts of it — and that I think about team productivity, not just personal output. This is senior product thinking.</div>
+        <a href="https://github.com/monilraval/PRD-Generator" target="_blank" class="proj-btn">View on GitHub ↗</a>
       </div>
     </div>
 
-    <!-- CS 2: AGCO -->
-    <div class="cs-full">
-      <div class="cs-full-inner">
-        <div>
-          <div class="cs-num">02</div>
-          <div class="cs-company">AGCO GmbH · 2023–2024 · 10 Months</div>
-          <div class="cs-title-full">Shipping a Multi-Country PIM & E-Commerce Platform Across Europe</div>
-          <p class="cs-summary">AGCO needed a single source of truth for product data across multiple European markets. The reality: fragmented legacy data, five country teams with competing priorities, a complex IT delivery engine, external vendors who had their own timeline, and stakeholders with wildly different definitions of "done." The job was to make it all converge into shipped software.</p>
-          <div class="cs-meta-bar">
-            <div class="cs-meta-item"><div class="cs-meta-label">Timeline</div><div class="cs-meta-val">12 months · 2023–2024</div></div>
-            <div class="cs-meta-item"><div class="cs-meta-label">Team</div><div class="cs-meta-val">IT, 5 Country Business Units, External Vendors</div></div>
-            <div class="cs-meta-item"><div class="cs-meta-label">My Role</div><div class="cs-meta-val">Product Owner — Single Backlog Owner</div></div>
-          </div>
-        </div>
-        <div>
-          <div class="cs-right-head">Research Phase</div>
-          <div class="cs-steps-full">
-            <div class="cs-step-full"><div class="cs-step-n">01</div><div class="cs-step-t">Ran discovery workshops across all country business units — surfacing requirements, mapping conflicts, and building a shared priority language before a single sprint started.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">02</div><div class="cs-step-t">Audited existing product data quality across all markets — identified the specific data governance gaps causing channel visibility failures.</div></div>
-          </div>
-          <div class="cs-right-head">Build Phase</div>
-          <div class="cs-steps-full">
-            <div class="cs-step-full"><div class="cs-step-n">03</div><div class="cs-step-t">Structured all requirements into a single prioritised Jira backlog — epics and user stories clear enough for engineering to build, meaningful enough for business to trust.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">04</div><div class="cs-step-t">Ran weekly 3-way syncs between IT, vendors, and business — acting as the single coordination point that prevented the classic delivery triangle from collapsing.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">05</div><div class="cs-step-t">Drove data governance framework that standardised product data across all markets — enabling consistent e-commerce visibility for the first time.</div></div>
-          </div>
-          <div class="cs-right-head" style="margin-top:1.5rem;">Impact</div>
-          <div class="cs-impacts-full">
-            <div class="cs-impact-full light"><div class="ci-num" style="">Multi-EU</div><div class="ci-text dark">Platform shipped across multiple countries from one backlog</div></div>
-            <div class="cs-impact-full light"><div class="ci-num">↑ Data</div><div class="ci-text dark">Product data consistency improved measurably across all markets</div></div>
-            <div class="cs-impact-full light"><div class="ci-num">3</div><div class="ci-text dark">Stakeholder groups aligned on one release plan and cadence</div></div>
-            <div class="cs-impact-full light"><div class="ci-num">↑ UX</div><div class="ci-text dark">Product discoverability improved across all digital channels</div></div>
-          </div>
-        </div>
+    <div class="stag">In Development — Next 30 Days</div>
+    <h2>Building the artefacts that <em>get interviews.</em></h2>
+    <div class="proj-grid">
+      <div class="proj-wip">
+        <div class="proj-wip-icon">📊</div>
+        <div class="proj-wip-title">Warehouse Ops KPI Dashboard</div>
+        <p class="proj-wip-text">A Power BI / Streamlit dashboard using synthetic Amazon-style shift data. Visualises throughput trends, error rate spikes, and staffing efficiency by hour and day. Includes a simple rule-based staffing recommendation engine. Directly demonstrates data analysis and product thinking for operations tech roles.</p>
+        <div class="proj-wip-eta">ETA: 7 days</div>
       </div>
-    </div>
-
-    <!-- CS 3: ClarusHorizon -->
-    <div class="cs-full">
-      <div class="cs-full-inner">
-        <div>
-          <div class="cs-num">03</div>
-          <div class="cs-company">ClarusHorizon.com · 2025–Present</div>
-          <div class="cs-title-full">Building an AI-Powered SaaS Affiliate Platform from Zero — Solo</div>
-          <p class="cs-summary">Most professionals talk about AI transformation. I ran the experiment on myself. ClarusHorizon.com is a live, multi-niche affiliate SaaS platform built from scratch — problem validation, MVP, launch, and continuous weekly iteration — using AI workflows at every stage of the product and content stack. No team. No funding. Just methodology, tools, and iteration discipline.</p>
-          <div class="cs-meta-bar">
-            <div class="cs-meta-item"><div class="cs-meta-label">Timeline</div><div class="cs-meta-val">2025 – Present (Ongoing)</div></div>
-            <div class="cs-meta-item"><div class="cs-meta-label">Team</div><div class="cs-meta-val">Solo + AI toolchain</div></div>
-            <div class="cs-meta-item"><div class="cs-meta-label">My Role</div><div class="cs-meta-val">Founder, Product, Operations, Growth</div></div>
-          </div>
-        </div>
-        <div>
-          <div class="cs-right-head">Research Phase</div>
-          <div class="cs-steps-full">
-            <div class="cs-step-full"><div class="cs-step-n">01</div><div class="cs-step-t">Validated niche demand before committing any development resources — defining the MVP through evidence, not enthusiasm.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">02</div><div class="cs-step-t">Mapped the competitive landscape and identified 3 underserved content gaps where AI-assisted production could create a sustainable advantage.</div></div>
-          </div>
-          <div class="cs-right-head">Build Phase</div>
-          <div class="cs-steps-full">
-            <div class="cs-step-full"><div class="cs-step-n">03</div><div class="cs-step-t">Built AI-assisted content workflows that scale output 10x without scaling headcount — automation at content, SEO, and distribution layers simultaneously.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">04</div><div class="cs-step-t">Integrated user behaviour analytics for weekly product iteration — every feature decision backed by data signal, never by assumption.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">05</div><div class="cs-step-t">Wired API integrations for affiliate tracking, engagement loops, and SEO monitoring — scalable architecture built without a technical team.</div></div>
-          </div>
-          <div class="cs-right-head" style="margin-top:1.5rem;">Impact</div>
-          <div class="cs-impacts-full">
-            <div class="cs-impact-full"><div class="ci-num">Live</div><div class="ci-text">Platform running, iterating, generating real learnings weekly</div></div>
-            <div class="cs-impact-full"><div class="ci-num">10x</div><div class="ci-text">Content output scaled using AI without headcount increase</div></div>
-            <div class="cs-impact-full"><div class="ci-num">0→1</div><div class="ci-text">Full lifecycle: idea → validation → MVP → live iteration</div></div>
-            <div class="cs-impact-full"><div class="ci-num">AI</div><div class="ci-text">First-hand practitioner expertise in AI-assisted product ops</div></div>
-          </div>
-        </div>
+      <div class="proj-wip">
+        <div class="proj-wip-icon">📋</div>
+        <div class="proj-wip-title">Feature Prioritisation Case Study</div>
+        <p class="proj-wip-text">A documented PO simulation: 15 features for a logistics SaaS product, scored with RICE methodology, with a written 2-page "Sprint 0 Decision Document" explaining what was built, what was deliberately NOT built, and why. Accompanied by a Loom walkthrough video. The single highest-signal PO artefact that almost no candidate has.</p>
+        <div class="proj-wip-eta">ETA: 7 days</div>
       </div>
-    </div>
-
-    <!-- CS 4: Bosch -->
-    <div class="cs-full">
-      <div class="cs-full-inner">
-        <div>
-          <div class="cs-num">04</div>
-          <div class="cs-company">Robert Bosch GmbH · 2022–2023 · 6 Months</div>
-          <div class="cs-title-full">Making a Global Enterprise SaaS Rollout Actually Stick at Bosch</div>
-          <p class="cs-summary">Enterprise SaaS has a well-documented failure rate — not because the software is bad, but because the change management is nonexistent. At Bosch, I was placed inside Finance & Operations to be the difference between a platform that launched and a platform that was actually used by the people who needed to use it every day.</p>
-          <div class="cs-meta-bar">
-            <div class="cs-meta-item"><div class="cs-meta-label">Timeline</div><div class="cs-meta-val">12 months · 2022–2023</div></div>
-            <div class="cs-meta-item"><div class="cs-meta-label">Team</div><div class="cs-meta-val">Finance, Ops, IT, Multi-Country Leads</div></div>
-            <div class="cs-meta-item"><div class="cs-meta-label">My Role</div><div class="cs-meta-val">Agile PM & Change Enablement Lead</div></div>
-          </div>
-        </div>
-        <div>
-          <div class="cs-right-head">Research Phase</div>
-          <div class="cs-steps-full">
-            <div class="cs-step-full"><div class="cs-step-n">01</div><div class="cs-step-t">Mapped the global stakeholder landscape across regions — identifying resistance points, adoption risks, and organisational dynamics before they became rollout blockers.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">02</div><div class="cs-step-t">Analysed previous platform adoption failures within Bosch to extract the specific change management gaps this rollout needed to address differently.</div></div>
-          </div>
-          <div class="cs-right-head">Build Phase</div>
-          <div class="cs-steps-full">
-            <div class="cs-step-full"><div class="cs-step-n">03</div><div class="cs-step-t">Developed role-specific process documentation and user enablement materials — not generic training decks, but practical guides tailored to how each business unit actually worked.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">04</div><div class="cs-step-t">Built a governance framework covering access management, escalation pathways, and usage standards that became permanently embedded as the platform operating standard.</div></div>
-            <div class="cs-step-full"><div class="cs-step-n">05</div><div class="cs-step-t">Ran structured communication campaigns that moved senior stakeholders from active resistance to visible, sustained adoption — including executives with institutional objections.</div></div>
-          </div>
-          <div class="cs-right-head" style="margin-top:1.5rem;">Impact</div>
-          <div class="cs-impacts-full">
-            <div class="cs-impact-full light"><div class="ci-num">Global</div><div class="ci-text dark">Multi-country rollout on timeline with permanent governance</div></div>
-            <div class="cs-impact-full light"><div class="ci-num">↑ UX</div><div class="ci-text dark">Role-specific materials reduced onboarding friction significantly</div></div>
-            <div class="cs-impact-full light"><div class="ci-num">Bosch</div><div class="ci-text dark">Enterprise change management at Germany's largest engineering firm</div></div>
-            <div class="cs-impact-full light"><div class="ci-num">↑ Gov</div><div class="ci-text dark">Governance structure became permanent platform operating standard</div></div>
-          </div>
-        </div>
+      <div class="proj-wip">
+        <div class="proj-wip-icon">🔧</div>
+        <div class="proj-wip-title">Lean A3 Process Improvement Case Study</div>
+        <p class="proj-wip-text">A complete A3 analysis of a real process I've observed at Amazon — shift handover procedure. Define, Measure, Analyse, Improve, Control. Full process map, fishbone diagram, root cause analysis, and proposed solution. Presented as a 4-page PDF. Directly targets Lean, operations excellence, and digital transformation roles at German Mittelstand companies.</p>
+        <div class="proj-wip-eta">ETA: 10 days</div>
+      </div>
+      <div class="proj-wip">
+        <div class="proj-wip-icon">💡</div>
+        <div class="proj-wip-title">More coming...</div>
+        <p class="proj-wip-text">Actively building based on feedback from senior recruiters and hiring managers in the German market. Goal: by end of Q2 2026, every claim on this portfolio is backed by a visible artefact — a dashboard, a document, a repo, or a recorded walkthrough.</p>
+        <div class="proj-wip-eta">Ongoing</div>
       </div>
     </div>
   </div>
 
-  <footer class="site-footer">
-    <div class="footer-name">Monil Raval</div>
-    <div class="footer-links">
+  <div class="ft">
+    <div class="ft-name">Monil Raval</div>
+    <div class="ft-links">
       <a href="https://www.linkedin.com/in/monilraval" target="_blank">LinkedIn</a>
       <a href="https://github.com/monilraval" target="_blank">GitHub</a>
       <a href="mailto:monilraval@gmail.com">Email</a>
     </div>
-    <div class="footer-copy">© 2026 · Kaufbeuren, Germany</div>
-  </footer>
+    <div class="ft-copy">© 2026 · Kaufbeuren, Germany</div>
+  </div>
 </div>
 
-<!-- ══════════════════════════════════
-     PAGE: WHY ME
-══════════════════════════════════ -->
+<!-- ══════════════════════════════════════
+     WHY ME PAGE
+══════════════════════════════════════ -->
 <div class="page" id="page-whyme">
-  <div class="wm-hero">
-    <div class="section-tag" style="color:var(--accent);">Why Me</div>
-    <h1>The honest case for <em>hiring Monil Raval.</em></h1>
-    <p class="wm-hero-sub">Not marketing. A direct, evidence-based answer to the question every recruiter is actually asking: why this person, in this market, for this kind of role?</p>
+  <div class="wm-banner">
+    <div class="stag stag-white">Why Me</div>
+    <h1>An honest case for<br><em>hiring Monil Raval.</em></h1>
+    <p class="wm-banner p" style="font-size:0.97rem;color:rgba(255,255,255,0.5);max-width:540px;line-height:1.88;margin-top:0.5rem;">Not marketing. A direct, evidence-based answer to what German hiring managers are actually evaluating — with honest self-assessment of where I am and where I'm heading.</p>
   </div>
 
-  <div class="pad">
-    <div class="section-tag">Three Core Reasons</div>
-    <h2>Built for the <em>German market.</em></h2>
-    <div class="wm-cards">
+  <div class="p1">
+    <div class="stag">Three Core Arguments</div>
+    <h2>Why consider me for <em>Product Owner or Operations roles.</em></h2>
+    <div class="wm-3col">
       <div class="wm-card">
         <div class="wm-num">01</div>
-        <div class="wm-title">Skills Proven Inside Germany's Most Demanding Organisations</div>
-        <p class="wm-body">I haven't just read about German business culture that I've delivered inside it at three of its most recognisable employers. Amazon EU. AGCO Marktoberdorf. Robert Bosch Stuttgart. I understand what Präzision, Verantwortung, and Ergebnisorientierung actually look like when performance is measured, not assumed.</p>
+        <div class="wm-title">I've Actually Done the Product Owner Job</div>
+        <p class="wm-body">Not a course certificate, not a simulation. At AGCO GmbH I owned a real backlog for a real platform used across real European markets for 10 months. I wrote user stories. I ran sprint ceremonies. I managed conflicting requirements from 5 country teams. I delivered releases on schedule. That experience is the foundation everything else builds on.</p>
         <div class="wm-list">
-          <div class="wm-item">KPI ownership under live operational pressure — Amazon EU, daily</div>
-          <div class="wm-item">Multi-country agile platform delivery — AGCO, 10 months, shipped</div>
-          <div class="wm-item">Enterprise change management — Bosch, 10,000+ user organisation</div>
-          <div class="wm-item">Cross-cultural fluency: DE corporate, EU multi-site, global vendors</div>
-          <div class="wm-item">German B1 active, advancing toward B2 — long-term commitment</div>
+          <div class="wm-item">~120 user stories owned across 3 quarterly releases</div>
+          <div class="wm-item">5 country business unit stakeholders coordinated weekly</div>
+          <div class="wm-item">PIM + E-Commerce platforms across EU markets</div>
+          <div class="wm-item">Jira, Confluence, Agile/Scrum — daily working practice</div>
+          <div class="wm-item">Data governance initiative with measurable quality impact</div>
         </div>
       </div>
       <div class="wm-card">
         <div class="wm-num">02</div>
-        <div class="wm-title">The Rare Bridge Between Operations and Digital</div>
-        <p class="wm-body">Most candidates are either operations professionals or digital professionals. That gap costs organisations dearly in transformation projects where both languages must be spoken fluently in the same meeting, sometimes by the same person. I am both — by deliberate design and by hard-won experience.</p>
+        <div class="wm-title">I Understand Operations From the Inside</div>
+        <p class="wm-body">Most product managers who work on operations tools have never worked in operations. They build dashboards for problems they've read about, not problems they've lived. My time at Amazon EU gives me something that can't be learned in a classroom: I know what it actually feels like when a KPI dashboard doesn't reflect the real bottleneck on the floor.</p>
         <div class="wm-list">
-          <div class="wm-item">Dual MSc IT + MBA Operational Excellence — both applied, not theoretical</div>
-          <div class="wm-item">Product backlog ownership AND fulfilment floor leadership — same career</div>
-          <div class="wm-item">Lean + Six Sigma + Agile as a unified operating system, not separate certifications</div>
-          <div class="wm-item">Founder experience: shipping AI-powered products solo, iterating weekly</div>
-          <div class="wm-item">Analytics fluency across operational, product, and commercial domains</div>
+          <div class="wm-item">400+ shifts in a world-class EU fulfilment environment</div>
+          <div class="wm-item">Direct experience with Amazon's KPI measurement system</div>
+          <div class="wm-item">Observed 3 specific process gaps now becoming project artefacts</div>
+          <div class="wm-item">Understanding of shift dynamics that product tools must accommodate</div>
+          <div class="wm-item">The operator's perspective — rare in PO candidates</div>
         </div>
       </div>
       <div class="wm-card">
         <div class="wm-num">03</div>
-        <div class="wm-title">Hungry, Grounded, and Building for the Long Term</div>
-        <p class="wm-body">I moved to Germany without a guaranteed path and built one through language barriers, cultural adaptation, and three organisations that reward performance, not presence. That's not a hardship story. It's the most honest proxy I can give you for what happens when I join your team and face something genuinely difficult.</p>
+        <div class="wm-title">Dual Master's Degrees + Self-Directed AI Upskilling</div>
+        <p class="wm-body">MBA in Operational Excellence and MSc in IT from German and Indian universities — the theoretical foundation is solid. On top of that, I'm actively building AI-powered tools (ShiftSense AI, PRD Generator) and studying Python data analysis in parallel to my Amazon role. I'm not waiting for the market to come to me.</p>
         <div class="wm-list">
-          <div class="wm-item">Bias for action with visible, measurable outcomes — not activity theatre</div>
-          <div class="wm-item">Comfortable with senior stakeholders and high ambiguity simultaneously</div>
-          <div class="wm-item">Entrepreneurial urgency inside structured corporate environments</div>
-          <div class="wm-item">Long-term commitment to Germany, the EU market, and this career arc</div>
-          <div class="wm-item">Targeting consulting, transformation, and strategic leadership tracks</div>
+          <div class="wm-item">MBA — Operations Excellence focus, Hof University 2024</div>
+          <div class="wm-item">MSc IT — software systems foundation, 2019</div>
+          <div class="wm-item">2 live GitHub projects with product + AI focus</div>
+          <div class="wm-item">3 new portfolio artefacts in active development</div>
+          <div class="wm-item">German B1 with active daily practice, targeting B2</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="pad-card">
-    <div class="section-tag">What Makes Me Different</div>
-    <h2>The <em>differentiation</em> in numbers.</h2>
-    <div class="wm-diff">
-      <div class="wm-diff-text">
-        <p>Most candidates at my level have depth in one dimension. Either operational delivery or digital product. Very few have both, with evidence from tier-one German employers, plus the entrepreneurial track record to demonstrate independent judgement.</p>
-        <p>The bars on the right represent how I index against a typical senior candidate profile in the German transformation market — based on the role requirements I see most frequently in consulting and operational leadership job specs.</p>
-        <a class="btn-dark" href="mailto:monilraval@gmail.com">Let's Talk ↗</a>
+  <div class="p2">
+    <div class="stag">Honest Self-Assessment</div>
+    <h2>Where I'm strong. <em>Where I'm growing.</em></h2>
+    <div class="bars-grid">
+      <div>
+        <div class="bar-row">
+          <div class="bar-label-row"><span class="bar-label">Agile Product Ownership</span><span class="bar-pct">Strong</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+          <div class="bar-note">12 months hands-on at AGCO. Confident with backlog, stories, ceremonies.</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label-row"><span class="bar-label">Stakeholder Management</span><span class="bar-pct">Strong</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+          <div class="bar-note">5 country teams at AGCO, enterprise governance at Bosch.</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label-row"><span class="bar-label">Operations & Process Knowledge</span><span class="bar-pct">Strong</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:82%"></div></div>
+          <div class="bar-note">Amazon EU + MBA operational excellence curriculum.</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label-row"><span class="bar-label">Change Management</span><span class="bar-pct">Solid</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+          <div class="bar-note">Bosch enterprise SaaS rollout — support role, not lead.</div>
+        </div>
       </div>
-      <div class="wm-diff-vis">
-        <div class="wm-bar-row"><div class="wm-bar-label"><span>Operational Depth (EU Market)</span><span>95%</span></div><div class="wm-bar-track"><div class="wm-bar-fill" style="width:95%"></div></div></div>
-        <div class="wm-bar-row"><div class="wm-bar-label"><span>Digital Product Ownership</span><span>88%</span></div><div class="wm-bar-track"><div class="wm-bar-fill" style="width:88%"></div></div></div>
-        <div class="wm-bar-row"><div class="wm-bar-label"><span>Change Management</span><span>85%</span></div><div class="wm-bar-track"><div class="wm-bar-fill" style="width:85%"></div></div></div>
-        <div class="wm-bar-row"><div class="wm-bar-label"><span>AI & Automation (Applied)</span><span>90%</span></div><div class="wm-bar-track"><div class="wm-bar-fill" style="width:90%"></div></div></div>
-        <div class="wm-bar-row"><div class="wm-bar-label"><span>Cross-Cultural Leadership</span><span>92%</span></div><div class="wm-bar-track"><div class="wm-bar-fill" style="width:92%"></div></div></div>
-        <div class="wm-bar-row"><div class="wm-bar-label"><span>Entrepreneurial Track Record</span><span>80%</span></div><div class="wm-bar-track"><div class="wm-bar-fill" style="width:80%"></div></div></div>
+      <div>
+        <div class="bar-row">
+          <div class="bar-label-row"><span class="bar-label">Data Analysis / Power BI</span><span class="bar-pct">Developing</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+          <div class="bar-note">Working knowledge. Actively building dashboard projects.</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label-row"><span class="bar-label">Python / SQL</span><span class="bar-pct">Learning</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:42%"></div></div>
+          <div class="bar-note">Applied in ShiftSense AI. Not production-level. Being honest.</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label-row"><span class="bar-label">German Language</span><span class="bar-pct">B1 — Growing</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+          <div class="bar-note">Daily use at Amazon. Active study. Target B2 by end 2026.</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label-row"><span class="bar-label">User Research / UX</span><span class="bar-pct">Foundational</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:38%"></div></div>
+          <div class="bar-note">Basic exposure. Not a current strength — being transparent.</div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="pad">
-    <div class="section-tag">Testimonials</div>
-    <h2>What colleagues <em>say.</em></h2>
-    <p style="font-size:0.87rem;color:var(--muted);margin-bottom:2rem;max-width:480px;line-height:1.75;">These are placeholder quotes — replace each one with a real quote from your manager at Amazon, AGCO, or Bosch. One genuine sentence from a real person outperforms the most polished placeholder.</p>
-    <div class="testi-grid">
-      <div class="testi">
-        <div class="testi-q">"Monil holds the big picture and the operational detail simultaneously — a combination that's genuinely rare. He brought structure to situations that had none, and the team followed him because they trusted his judgement, not just his authority."</div>
-        <div class="testi-author">← Bastin Black</div>
-        <div class="testi-role">Operations Lead · Amazon EU · [2025]</div>
-      </div>
-      <div class="testi">
-        <div class="testi-q">"As Product Owner, Monil was the glue between IT and the business. He translated complexity into clarity every single sprint and kept three very different stakeholder groups accountable to the same outcome — without drama, without escalation."</div>
-        <div class="testi-author">Srusti Modi</div>
-        <div class="testi-role">Product Manager · AGCO GmbH · [2024]</div>
-        
-      </div>
-      <div class="testi">
-        <div class="testi-q">"What distinguished Monil was ownership. He didn't wait for direction — he identified the gaps, built the solution, and drove it forward. That kind of proactive accountability is exactly what enterprise transformation demands and rarely finds."</div>
-        <div class="testi-author">Suthamani Kunalingam</div>
-        <div class="testi-role">Project Lead · Robert Bosch GmbH · [2023]</div>
-        
-      </div>
+  <div class="recruiter-cta">
+    <div class="rcta-text">
+      <h3>For recruiters and<br>hiring managers</h3>
+      <p>I'm available for interviews immediately. My background is strongest for Product Owner, Business Analyst, and Operations Analyst roles in Germany — particularly in logistics, manufacturing, e-commerce, or enterprise software. I'm a direct, reliable, and honest candidate. No surprises.</p>
+      <p style="margin-top:0.8rem;font-size:0.82rem;color:rgba(255,255,255,0.35);">📍 Kaufbeuren · Open to Munich, Stuttgart, Frankfurt, Nuremberg · Hybrid or remote considered</p>
+    </div>
+    <div class="rcta-actions">
+      <a class="btn-gold" href="mailto:monilraval@gmail.com">Email Me Directly</a>
+      <a class="btn-outline" style="color:var(--white);border-color:rgba(255,255,255,0.3);" href="https://www.linkedin.com/in/monilraval" target="_blank">LinkedIn Profile</a>
+      
     </div>
   </div>
 
-  <footer class="site-footer">
-    <div class="footer-name">Monil Raval</div>
-    <div class="footer-links">
+  <div class="ft">
+    <div class="ft-name">Monil Raval</div>
+    <div class="ft-links">
       <a href="https://www.linkedin.com/in/monilraval" target="_blank">LinkedIn</a>
       <a href="https://github.com/monilraval" target="_blank">GitHub</a>
       <a href="mailto:monilraval@gmail.com">Email</a>
     </div>
-    <div class="footer-copy">© 2026 · Kaufbeuren, Germany</div>
-  </footer>
+    <div class="ft-copy">© 2026 · Kaufbeuren, Germany</div>
+  </div>
 </div>
 
-<!-- ══════════════════════════════════
-     PAGE: LAB
-══════════════════════════════════ -->
-<div class="page" id="page-lab">
-  <div class="lab-hero">
-    <div class="section-tag" style="color:var(--accent);">Lab</div>
-    <h1>Where ideas become <em>working code.</em></h1>
-    <p class="lab-hero-sub">I build at the intersection of operations and AI not as a hobby, but as a proof of methodology. These are live GitHub projects that demonstrate what I produce when given a real problem, a clear hypothesis, and time to execute independently.</p>
-  </div>
-
-  <div class="pad">
-    <div class="section-tag">Live Projects</div>
-    <h2>Built by me. <em>Running right now.</em></h2>
-    <div class="lab-grid" style="margin-bottom:3rem;">
-      <div class="lab-card">
-        <div class="lab-card-top">
-          <div class="lab-type">AI · Operations · Predictive Analytics</div>
-          <a href="https://github.com/monilraval/shiftsense-ai" target="_blank" class="lab-gh">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub →
-          </a>
-        </div>
-        <div class="lab-title">ShiftSense AI</div>
-        <p class="lab-desc">An AI-powered operations intelligence tool that predicts busy warehouse periods and recommends staffing levels, shift plans, and bottleneck alerts. Built using historical volume data, time-of-day patterns, weekday cycles, seasonality, and special event modelling. Designed for the exact operational context I manage at Amazon EU — not a textbook exercise, but a tool for a real floor with real consequences.</p>
-        <div class="lab-stack">
-          <span class="lab-stag">Python</span><span class="lab-stag">Machine Learning</span><span class="lab-stag">Predictive Analytics</span><span class="lab-stag">Operations AI</span><span class="lab-stag">Workforce Planning</span><span class="lab-stag">Data Modelling</span>
-        </div>
-        <div class="lab-why"><span>Why it matters:</span> This project lives at the exact intersection of operations leadership, data analytics, and applied AI — the three pillars every consulting and transformation client wants in a single hire. I didn't study demand forecasting in a classroom; I built a working predictive model for the warehouse floor I manage at 5am.</div>
-        <a href="https://github.com/monilraval/shiftsense-ai" target="_blank" class="lab-btn">View Full Project on GitHub ↗</a>
-      </div>
-
-      <div class="lab-card">
-        <div class="lab-card-top">
-          <div class="lab-type">AI · Product Management · Automation</div>
-          <a href="https://github.com/monilraval/PRD-Generator" target="_blank" class="lab-gh">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub →
-          </a>
-        </div>
-        <div class="lab-title">PRD Generator</div>
-        <p class="lab-desc">An AI-powered tool that generates complete, structured Product Requirement Documents from a brief natural-language input. Built out of direct frustration with the hours consumed by PRD boilerplate during my time as Product Owner at AGCO — this compresses a two-hour documentation task to under five minutes without sacrificing structure, rigour, or stakeholder legibility. The output includes objective, scope, user stories, acceptance criteria, and technical considerations.</p>
-        <div class="lab-stack">
-          <span class="lab-stag">AI / LLM</span><span class="lab-stag">Prompt Engineering</span><span class="lab-stag">Product Management</span><span class="lab-stag">Workflow Automation</span><span class="lab-stag">Documentation</span><span class="lab-stag">NLP</span>
-        </div>
-        <div class="lab-why"><span>Why it matters:</span> Every product organisation writes PRDs. This demonstrates that I don't just manage backlogs — I systematically eliminate the overhead around them. The difference between a Product Owner who delivers and one who also multiplies the team's total output capacity.</div>
-        <a href="https://github.com/monilraval/PRD-Generator" target="_blank" class="lab-btn">View Full Project on GitHub ↗</a>
-      </div>
-    </div>
-
-    <div class="lab-grid">
-      <div class="lab-coming">
-        <div class="lab-coming-icon">🚧</div>
-        <div class="lab-coming-text"><strong>Next Project — In Progress</strong><br><br>An operations analytics dashboard that surfaces real-time KPI trends and recommends corrective actions using pattern recognition from historical shift data. Inspired directly by gaps I've observed in Amazon's existing team lead tooling.</div>
-      </div>
-      <div class="lab-coming">
-        <div class="lab-coming-icon">💡</div>
-        <div class="lab-coming-text"><strong>Research Phase — Change Readiness Scorer</strong><br><br>A tool that uses survey responses and organisational data to score enterprise change readiness before a SaaS rollout begins — addressing the #1 failure mode I observed at Bosch. Early hypothesis validation underway.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="pad-card">
-    <div class="section-tag">My Philosophy</div>
-    <div class="lab-philosophy">
-      <div class="lab-phil-text">
-        <h2>Why I build when <em>I don't have to.</em></h2>
-        <p>Most people in operations or product management roles talk about AI. They attend the webinars, read the newsletters, and include "AI-curious" in their LinkedIn bio. I build with it instead, because the gap between reading about a tool and actually using it to ship something real is where most people's understanding stops and mine begins.</p>
-        <p>Every project in this lab starts with a genuine problem I've personally experienced, not a portfolio-building exercise. ShiftSense AI came from a morning shift where I couldn't get reliable demand forecasts. PRD Generator came from my third consecutive hour writing boilerplate at AGCO.</p>
-        <p>The work is imperfect and iterating. That's the point. Real learning happens in the gap between the first commit and the version that actually works.</p>
-        <a class="btn-dark" href="https://github.com/monilraval" target="_blank">View GitHub Profile ↗</a>
-      </div>
-      <div class="lab-phil-stats">
-        <div class="lab-stat"><div class="lab-stat-num">2</div><div class="lab-stat-text">Live projects solving real operational problems</div></div>
-        <div class="lab-stat"><div class="lab-stat-num">2</div><div class="lab-stat-text">Projects in active research or development</div></div>
-        <div class="lab-stat"><div class="lab-stat-num">100%</div><div class="lab-stat-text">Problems sourced from my own professional experience</div></div>
-        <div class="lab-stat"><div class="lab-stat-num">0</div><div class="lab-stat-text">Portfolio projects built just to look good on a CV</div></div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <div class="footer-name">Monil Raval</div>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/monilraval" target="_blank">LinkedIn</a>
-      <a href="https://github.com/monilraval" target="_blank">GitHub</a>
-      <a href="mailto:monilraval@gmail.com">Email</a>
-    </div>
-    <div class="footer-copy">© 2026 · Kaufbeuren, Germany</div>
-  </footer>
-</div>
-
+<!-- ══════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════ -->
 <script>
-/* ══════════ PAGE ROUTER ══════════ */
-function showPage(id){
+function go(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
-  const page = document.getElementById('page-'+id);
-  if(page){ page.classList.add('active'); window.scrollTo(0,0); }
-  const navEl = document.getElementById('nav-'+id);
-  if(navEl) navEl.classList.add('active');
+  const pg=document.getElementById('page-'+id);
+  if(pg){pg.classList.add('active');window.scrollTo(0,0);}
+  const nav=document.getElementById('n-'+id);
+  if(nav)nav.classList.add('active');
+}
+function toggleMob(){
+  document.getElementById('mobMenu').classList.toggle('open');
 }
 
-/* ══════════ HAMBURGER ══════════ */
-function toggleMenu(){
-  const m = document.getElementById('mobileMenu');
-  m.classList.toggle('open');
-}
-
-/* ══════════ 3D AI PARTICLE CANVAS ══════════ */
+/* 3D AI Canvas */
 (function(){
-  const canvas = document.getElementById('heroCanvas');
-  if(!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W,H,particles;
-  const mouse={x:null,y:null};
-  const N=120, DIST=135;
-  const COLS=['#c8a96e','#7c6aff','rgba(255,255,255,0.7)'];
-
-  function resize(){ W=canvas.width=window.innerWidth; H=canvas.height=window.innerHeight; }
-
-  function Particle(){
-    this.reset();
-    this.x=Math.random()*W;
-    this.y=Math.random()*H;
+  const c=document.getElementById('heroCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  let W,H,pts;
+  const M={x:null,y:null};
+  const N=100,D=130;
+  const CL=['#c8a96e','#4f6ef7','rgba(255,255,255,0.65)'];
+  function rsz(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;}
+  function Pt(){
+    this.x=Math.random()*W;this.y=Math.random()*H;
+    this.vx=(Math.random()-.5)*.45;this.vy=(Math.random()-.5)*.45;
+    this.r=Math.random()*1.7+.7;this.col=CL[Math.floor(Math.random()*CL.length)];
+    this.p=Math.random()*Math.PI*2;
   }
-  Particle.prototype.reset=function(){
-    this.x=Math.random()*W; this.y=Math.random()*H;
-    this.vx=(Math.random()-0.5)*0.5; this.vy=(Math.random()-0.5)*0.5;
-    this.r=Math.random()*1.8+0.7;
-    this.color=COLS[Math.floor(Math.random()*COLS.length)];
-    this.pulse=Math.random()*Math.PI*2;
+  Pt.prototype.u=function(){
+    this.p+=.012;this.x+=this.vx;this.y+=this.vy;
+    if(this.x<-8)this.x=W+8;if(this.x>W+8)this.x=-8;
+    if(this.y<-8)this.y=H+8;if(this.y>H+8)this.y=-8;
+    if(M.x){const dx=M.x-this.x,dy=M.y-this.y,d=Math.sqrt(dx*dx+dy*dy);if(d<160){this.x+=dx*.0018;this.y+=dy*.0018;}}
   };
-  Particle.prototype.update=function(){
-    this.pulse+=0.012; this.x+=this.vx; this.y+=this.vy;
-    if(this.x<-10) this.x=W+10;
-    if(this.x>W+10) this.x=-10;
-    if(this.y<-10) this.y=H+10;
-    if(this.y>H+10) this.y=-10;
-    if(mouse.x){const dx=mouse.x-this.x,dy=mouse.y-this.y,d=Math.sqrt(dx*dx+dy*dy);if(d<180){this.x+=dx*0.002;this.y+=dy*0.002;}}
-  };
-  Particle.prototype.draw=function(){
-    ctx.beginPath();
-    ctx.arc(this.x,this.y,this.r*(1+Math.sin(this.pulse)*0.25),0,Math.PI*2);
-    ctx.fillStyle=this.color;
-    ctx.fill();
-    if(this.color===COLS[0]){
-      ctx.beginPath();ctx.arc(this.x,this.y,this.r*3.5,0,Math.PI*2);
-      const g=ctx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.r*3.5);
-      g.addColorStop(0,'rgba(200,169,110,0.12)');g.addColorStop(1,'rgba(200,169,110,0)');
+  Pt.prototype.d=function(){
+    ctx.beginPath();ctx.arc(this.x,this.y,this.r*(1+Math.sin(this.p)*.22),0,Math.PI*2);
+    ctx.fillStyle=this.col;ctx.fill();
+    if(this.col===CL[0]){
+      ctx.beginPath();ctx.arc(this.x,this.y,this.r*3.2,0,Math.PI*2);
+      const g=ctx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.r*3.2);
+      g.addColorStop(0,'rgba(200,169,110,.12)');g.addColorStop(1,'rgba(200,169,110,0)');
       ctx.fillStyle=g;ctx.fill();
     }
   };
-
   function frame(){
     ctx.clearRect(0,0,W,H);
-    // Grid
-    ctx.strokeStyle='rgba(255,255,255,0.022)';ctx.lineWidth=0.5;
-    for(let x=0;x<W;x+=90){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
-    for(let y=0;y<H;y+=90){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
-    // Connections
-    for(let i=0;i<particles.length;i++){
-      for(let j=i+1;j<particles.length;j++){
-        const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y;
-        const d=Math.sqrt(dx*dx+dy*dy);
-        if(d<DIST){
-          const a=(1-d/DIST)*0.3;
-          const gr=ctx.createLinearGradient(particles[i].x,particles[i].y,particles[j].x,particles[j].y);
-          gr.addColorStop(0,'rgba(200,169,110,'+a+')');
-          gr.addColorStop(1,'rgba(124,106,255,'+a+')');
-          ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);
-          ctx.strokeStyle=gr;ctx.lineWidth=0.55;ctx.stroke();
-        }
+    ctx.strokeStyle='rgba(255,255,255,.02)';ctx.lineWidth=.5;
+    for(let x=0;x<W;x+=85){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+    for(let y=0;y<H;y+=85){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+    for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<D){
+        const a=(1-d/D)*.28;
+        const gr=ctx.createLinearGradient(pts[i].x,pts[i].y,pts[j].x,pts[j].y);
+        gr.addColorStop(0,'rgba(200,169,110,'+a+')');gr.addColorStop(1,'rgba(79,110,247,'+a+')');
+        ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+        ctx.strokeStyle=gr;ctx.lineWidth=.52;ctx.stroke();
       }
     }
-    particles.forEach(p=>{p.update();p.draw();});
+    pts.forEach(p=>{p.u();p.d();});
     requestAnimationFrame(frame);
   }
-
-  function init(){
-    resize();
-    particles=[];
-    for(let i=0;i<N;i++) particles.push(new Particle());
-    frame();
-  }
-
-  window.addEventListener('resize',resize);
-  window.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;});
-  window.addEventListener('mouseleave',()=>{mouse.x=null;mouse.y=null;});
+  function init(){rsz();pts=[];for(let i=0;i<N;i++)pts.push(new Pt());frame();}
+  window.addEventListener('resize',rsz);
+  window.addEventListener('mousemove',e=>{M.x=e.clientX;M.y=e.clientY;});
+  window.addEventListener('mouseleave',()=>{M.x=null;M.y=null;});
   init();
 })();
 </script>
