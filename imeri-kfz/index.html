@@ -112,7 +112,7 @@ h2{font-size:clamp(2.2rem,5.6vw,4.4rem)}
 .record{border:1.5px solid var(--ink);background:#fbfaf7;position:relative}
 .record header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1.5px solid var(--ink);font:600 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
 .record header i{font-style:normal;color:var(--red)}
-.record dl{display:grid;grid-template-columns:minmax(120px,.8fr) 2fr}
+.record dl{display:grid;grid-template-columns:minmax(150px,.8fr) 2fr}
 .record dt,.record dd{padding:16px 20px;border-bottom:1px solid var(--rule)}
 .record dt{font:500 .72rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--steel);border-right:1px solid var(--rule)}
 .record dd{font-weight:600}
@@ -120,6 +120,9 @@ h2{font-size:clamp(2.2rem,5.6vw,4.4rem)}
 .record dl>:nth-last-child(-n+2){border-bottom:0}
 .stamp{position:absolute;right:-18px;bottom:-26px;width:118px;height:118px;transform:rotate(-12deg);color:var(--red);opacity:.9}
 @media (max-width:900px){.about .wrap{grid-template-columns:1fr}.stamp{right:8px}}
+@media (max-width:640px){.record dl{grid-template-columns:1fr}.record dt{border-right:0;border-bottom:0;padding-bottom:2px}.record dd{padding-top:2px}.record dt,.record dd{overflow-wrap:anywhere}
+  .stamp{position:relative;right:auto;bottom:auto;display:block;margin:4px 12px 12px auto;width:96px;height:96px}}
+.record dt{overflow-wrap:anywhere;hyphens:auto;letter-spacing:.08em}
 
 /* red parallax band */
 .band{position:relative;height:clamp(340px,50vw,580px);overflow:hidden;background:var(--red);color:#fff}
