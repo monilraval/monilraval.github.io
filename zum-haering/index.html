@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gaststätte Zum Häring – Kroatische Küche & Biergarten in Kaufbeuren</title>
+<meta name="description" content="Gaststätte Zum Häring am Kemptener Tor 9 in Kaufbeuren: Ćevapčići, Grillteller, Schnitzel, Pizza und Salatbuffet. Biergarten unter der Stadtmauer. 4,7 Sterne bei über 1.300 Google-Bewertungen. Tel. 08341 2895.">
+<!-- Pitch demo: keep out of search until the owner approves and the site moves to his domain -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15100d">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://monilraval.github.io/zum-haering/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Gaststätte Zum Häring">
+<meta property="og:title" content="Gaststätte Zum Häring – Vom Grill, am Kemptener Tor">
+<meta property="og:description" content="Kroatische Grillküche, Schnitzel, Pizza und Salatbuffet – mit Biergarten unter der Kaufbeurer Stadtmauer.">
+<meta property="og:url" content="https://monilraval.github.io/zum-haering/">
+<meta property="og:image" content="https://monilraval.github.io/zum-haering/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Glühende Holzkohle und Flammen unter einem Grillrost – Gaststätte Zum Häring">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="media/hero-poster.jpg" as="image" fetchpriority="high">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Gaststätte Zum Häring",
+"telephone":"+49 8341 2895","servesCuisine":["Kroatisch","Grill","Pizza"],"priceRange":"€€",
+"image":"https://monilraval.github.io/zum-haering/media/og.jpg",
+"address":{"@type":"PostalAddress","streetAddress":"Kemptener Tor 9","postalCode":"87600","addressLocality":"Kaufbeuren","addressRegion":"Bayern","addressCountry":"DE"},
+"geo":{"@type":"GeoCoordinates","latitude":47.881783,"longitude":10.616708},
+"openingHoursSpecification":[
+ {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:30","closes":"14:00"},
+ {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"17:30","closes":"22:30"},
+ {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"17:30","closes":"22:00"}],
+"hasMap":"https://www.google.com/maps/search/?api=1&query=Gastst%C3%A4tte%20Zum%20H%C3%A4ring%20Kaufbeuren"}
+</script>
+<style>
+@font-face{font-family:"Fraunces";src:url(fonts/fraunces.woff2) format("woff2");font-weight:300 700;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(fonts/fraunces-italic.woff2) format("woff2");font-weight:300 600;font-style:italic;font-display:swap}
+@font-face{font-family:"Manrope";src:url(fonts/manrope.woff2) format("woff2");font-weight:200 800;font-display:swap}
+:root{
+  --char:#15100d;--char-2:#211915;--char-3:#2c221c;
+  --cream:#f6ecdc;--paper:#efe2cc;--paper-2:#e6d5ba;--rule:#d2bf9f;
+  --ink:#1c140f;--soft:#6b5a4b;
+  --ember:#e2532a;--ember-d:#c03f1a;--gold:#f0a83a;--olive:#5d6a34;--adria:#1e5b78;
+  --serif:"Fraunces",Georgia,serif;--sans:"Manrope",system-ui,sans-serif;
+  --gut:clamp(16px,4.5vw,56px);--max:1240px;--ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);overflow-x:hidden}
+img,svg,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(100% - 2*var(--gut),var(--max));margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(2.3rem,6vw,4.6rem)}
+h2 em,h1 em{font-style:italic;font-weight:400;color:var(--ember)}
+.kicker{display:inline-flex;align-items:center;gap:.7em;font:700 .75rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ember-d)}
+.kicker::before{content:"";width:14px;height:14px;background:conic-gradient(currentColor 25%,transparent 0 50%,currentColor 0 75%,transparent 0);background-size:7px 7px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:1em 1.5em;border-radius:999px;font:700 .98rem/1 var(--sans);text-decoration:none;transition:transform .3s var(--ease),background .3s,color .3s,box-shadow .3s;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-fire{background:var(--ember);color:#fff;box-shadow:0 10px 30px -10px rgba(226,83,42,.8)}
+.btn-fire:hover{background:var(--ember-d);transform:translateY(-2px)}
+.btn-ghost{color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(246,236,220,.45)}
+.btn-ghost:hover{background:rgba(246,236,220,.1);transform:translateY(-2px)}
+.btn-dark{background:var(--char);color:var(--cream)}
+.btn-dark:hover{background:var(--char-3);transform:translateY(-2px)}
+:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--cream);padding:.6em 1em}.skip:focus{left:8px}
+
+/* demo strip */
+.demo{position:relative;z-index:60;background:var(--gold);color:var(--char);font:600 .78rem/1.35 var(--sans);text-align:center;padding:.5em var(--gut)}
+
+/* header */
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,backdrop-filter .4s,box-shadow .4s;top:var(--demo-h,0)}
+.top.solid{background:rgba(21,16,13,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(246,236,220,.08);top:0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:72px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--cream);min-width:0}
+.brand img{width:40px;height:40px;border-radius:10px;flex:none}
+.brand b{display:block;font:500 1.2rem/1 var(--serif);white-space:nowrap}
+.brand small{display:block;font:600 .64rem/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.nav{display:flex;align-items:center;gap:1.6rem}
+.nav a{color:var(--cream);text-decoration:none;font:600 .9rem/1 var(--sans);opacity:.85}
+.nav a:hover{opacity:1}
+.nav .btn{padding:.75em 1.15em;opacity:1}
+@media (max-width:900px){.nav a:not(.btn){display:none}}
+@media (max-width:420px){.brand small{display:none}.nav .btn span{display:none}.nav .btn{padding:.75em}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;color:var(--cream);background:var(--char);overflow:hidden;isolation:isolate}
+.layer{will-change:transform}
+.l-film{position:absolute;inset:-8% 0;z-index:-2}
+.l-film video,.l-film img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(21,16,13,.55) 0%,rgba(21,16,13,0) 30%,rgba(21,16,13,.15) 55%,rgba(21,16,13,.92) 100%),linear-gradient(90deg,rgba(21,16,13,.7),rgba(21,16,13,0) 70%)}
+.hero-copy{padding:clamp(120px,22vh,200px) 0 clamp(36px,7vh,72px)}
+.status{display:inline-flex;align-items:center;gap:.6em;padding:.5em .95em;border-radius:999px;background:rgba(21,16,13,.55);box-shadow:inset 0 0 0 1px rgba(246,236,220,.22);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font:600 .85rem/1.2 var(--sans)}
+.status i{width:9px;height:9px;border-radius:50%;background:#8a8a8a;flex:none}
+.status.open i{background:#5fd07a;box-shadow:0 0 0 0 rgba(95,208,122,.6);animation:ping 2s infinite}
+.status.soon i{background:var(--gold)}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(95,208,122,0)}100%{box-shadow:0 0 0 0 rgba(95,208,122,0)}}
+.hero h1{font-size:clamp(3rem,8.4vw,7.4rem);font-weight:400;line-height:.94;margin:.32em 0 .24em}
+.hero h1 em{color:var(--gold)}
+.hero .lede{max-width:34rem;font-size:clamp(1.05rem,1.6vw,1.2rem);color:rgba(246,236,220,.86)}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.6rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid rgba(246,236,220,.18);font:600 .9rem/1.3 var(--sans);color:rgba(246,236,220,.8)}
+.proof .stars{color:var(--gold);letter-spacing:.1em;font-size:1rem}
+.proof b{font:500 1.7rem/1 var(--serif);color:var(--cream);margin-right:.25em}
+.scroll-cue{position:absolute;right:var(--gut);bottom:clamp(36px,7vh,72px);writing-mode:vertical-rl;font:700 .7rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:rgba(246,236,220,.6);display:flex;align-items:center;gap:.8em}
+.scroll-cue::after{content:"";width:1px;height:56px;background:linear-gradient(rgba(246,236,220,.6),transparent)}
+@media (max-width:700px){.scroll-cue{display:none}}
+
+/* checker strip */
+.checker{height:14px;background:conic-gradient(var(--ember) 25%,var(--cream) 0 50%,var(--ember) 0 75%,var(--cream) 0) 0 0/14px 14px}
+
+/* intro */
+.intro{padding:clamp(80px,12vw,150px) 0 clamp(60px,9vw,110px)}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,90px);align-items:end}
+.intro p.big{font:400 clamp(1.5rem,3vw,2.2rem)/1.3 var(--serif);letter-spacing:-.01em;margin-top:1.2rem}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:18px;overflow:hidden}
+.facts div{background:var(--paper);padding:1.3rem 1.2rem}
+.facts b{display:block;font:500 clamp(1.8rem,3.4vw,2.6rem)/1 var(--serif);color:var(--ember-d)}
+.facts span{display:block;margin-top:.45rem;font:600 .82rem/1.35 var(--sans);color:var(--soft)}
+@media (max-width:860px){.intro-grid{grid-template-columns:1fr}}
+
+/* dishes */
+.dishes{background:var(--char);color:var(--cream);padding:clamp(80px,11vw,140px) 0;position:relative;overflow:hidden}
+.dishes .kicker{color:var(--gold)}
+.dish-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1.5rem;margin-bottom:clamp(36px,5vw,64px)}
+.dish-head p{max-width:30rem;color:rgba(246,236,220,.72)}
+.menu{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+.card{position:relative;grid-column:span 4;min-height:300px;border-radius:22px;padding:1.6rem;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--char-2);box-shadow:inset 0 0 0 1px rgba(246,236,220,.08);transition:transform .5s var(--ease),box-shadow .5s}
+.card:hover{transform:translateY(-6px);box-shadow:inset 0 0 0 1px rgba(240,168,58,.4),0 30px 60px -30px rgba(226,83,42,.55)}
+.card.wide{grid-column:span 8}
+.card.wide p{max-width:24rem}
+.card .art{position:absolute;inset:0;z-index:0;opacity:.95}
+.card>*:not(.art){position:relative;z-index:1}
+.card .num{font:500 .8rem/1 var(--sans);letter-spacing:.18em;color:var(--gold);margin-bottom:auto}
+.card h3{font-size:clamp(1.7rem,3vw,2.5rem);margin:.2em 0 .3em;overflow-wrap:anywhere}
+.card p{color:rgba(246,236,220,.75);font-size:.98rem;max-width:30rem}
+.card .badge{align-self:flex-start;display:inline-block;margin-top:.9rem;padding:.4em .8em;border-radius:999px;font:700 .72rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;background:rgba(240,168,58,.16);color:var(--gold)}
+@media (max-width:960px){.card,.card.wide{grid-column:span 6}}
+@media (max-width:640px){.card,.card.wide{grid-column:span 12;min-height:250px}}
+.menu-note{margin-top:1.6rem;font-size:.92rem;color:rgba(246,236,220,.6)}
+.menu-note a{color:var(--gold)}
+
+/* biergarten band */
+.garden{position:relative;height:clamp(560px,92vh,860px);overflow:hidden;background:linear-gradient(180deg,#0e1622 0%,#1b2333 45%,#3a2a24 78%,#4a2f22 100%);color:var(--cream);isolation:isolate}
+.garden .layer{position:absolute;left:0;right:0}
+.g-word{top:12%;text-align:center;font:italic 300 clamp(5rem,20vw,17rem)/1 var(--serif);color:rgba(246,236,220,.07);white-space:nowrap;letter-spacing:-.03em}
+.g-wall{bottom:-2%;height:62%}
+.g-wall svg{width:100%;height:100%}
+.g-lights{top:24%;height:30%}
+.g-lights svg{width:100%;height:100%;overflow:visible}
+.bulb{fill:#ffd58a;filter:drop-shadow(0 0 6px rgba(255,190,90,.95)) drop-shadow(0 0 16px rgba(255,150,60,.6));animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{50%{opacity:.55}}
+.g-front{bottom:-6%;height:34%}
+.g-front svg{width:100%;height:100%}
+.g-copy{position:absolute;inset:auto 0 0;z-index:5;padding-bottom:clamp(40px,8vh,90px)}
+.g-copy .kicker{color:var(--gold)}
+.g-copy h2{margin:.35em 0 .3em;max-width:12ch;text-shadow:0 2px 30px rgba(0,0,0,.6)}
+.g-copy p{max-width:30rem;color:rgba(246,236,220,.85);text-shadow:0 1px 14px rgba(0,0,0,.7)}
+
+/* reviews */
+.reviews{padding:clamp(80px,11vw,140px) 0;background:var(--cream)}
+.rev-head{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end;margin-bottom:clamp(36px,5vw,60px)}
+.score{text-align:right}
+.score b{display:block;font:400 clamp(4rem,10vw,7.5rem)/.9 var(--serif);color:var(--ember)}
+.score span{font:600 .9rem/1.4 var(--sans);color:var(--soft)}
+.score .stars{color:var(--gold);font-size:1.3rem;letter-spacing:.12em}
+@media (max-width:700px){.rev-head{grid-template-columns:1fr}.score{text-align:left}}
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.q{background:var(--paper);border-radius:22px;padding:1.8rem;display:flex;flex-direction:column;gap:1.2rem;box-shadow:inset 0 0 0 1px var(--rule)}
+.q.feature{grid-row:span 2;background:var(--char);color:var(--cream);box-shadow:none}
+.q blockquote{font:400 1.18rem/1.45 var(--serif)}
+.q.feature blockquote{font-size:clamp(1.35rem,2.2vw,1.7rem)}
+.q blockquote::before{content:"“";display:block;font:400 4rem/.6 var(--serif);color:var(--ember);height:.45em}
+.q footer{margin-top:auto;font:700 .78rem/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.q.feature footer{color:var(--gold)}
+@media (max-width:900px){.quotes{grid-template-columns:1fr 1fr}.q.feature{grid-column:span 2;grid-row:auto}}
+@media (max-width:600px){.quotes{grid-template-columns:1fr}.q.feature{grid-column:auto}}
+.disclaimer{margin-top:1.4rem;font-size:.85rem;color:var(--soft)}
+.disclaimer a{color:var(--ember-d)}
+
+/* feiern */
+.feiern{padding:clamp(80px,11vw,140px) 0;background:var(--paper)}
+.feiern-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.occasions{display:grid;gap:12px}
+.occ{display:grid;grid-template-columns:56px 1fr;gap:1.1rem;align-items:center;padding:1.15rem 1.3rem;border-radius:18px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--rule);transition:transform .4s var(--ease)}
+.occ:hover{transform:translateX(6px)}
+.occ svg{width:56px;height:56px}
+.occ b{display:block;font:500 1.35rem/1.15 var(--serif)}
+.occ span{font-size:.95rem;color:var(--soft)}
+@media (max-width:860px){.feiern-grid{grid-template-columns:1fr}}
+
+/* visit */
+.visit{background:var(--char);color:var(--cream);padding:clamp(80px,11vw,140px) 0}
+.visit .kicker{color:var(--gold)}
+.visit-grid>*{min-width:0}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);margin-top:clamp(32px,4vw,56px)}
+.panel{border-radius:24px;background:var(--char-2);box-shadow:inset 0 0 0 1px rgba(246,236,220,.08);padding:clamp(1.4rem,3vw,2.2rem)}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours th,.hours td{padding:.8rem 0;border-bottom:1px solid rgba(246,236,220,.1);text-align:left;vertical-align:top}
+.hours th{font:600 1rem/1.4 var(--sans);width:38%}
+.hours td{color:rgba(246,236,220,.82)}
+.hours tr.today th,.hours tr.today td{color:var(--gold)}
+.hours tr.today th::after{content:" · heute";font-weight:500;font-size:.8rem}
+.hours .closed td{color:rgba(246,236,220,.45)}
+.hours td span{display:inline-block;white-space:nowrap;margin-right:.9em}
+.small{font-size:.86rem;color:rgba(246,236,220,.6);margin-top:1rem}
+.mapcard{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:1.6rem;overflow:hidden}
+.mapcard svg.map{position:absolute;inset:0;width:100%;height:100%;opacity:.55;z-index:0}
+.mapcard>*:not(.map){position:relative;z-index:1}
+.addr{font:400 clamp(1.8rem,3.6vw,2.7rem)/1.1 var(--serif)}
+.addr small{display:block;font:600 .95rem/1.5 var(--sans);color:rgba(246,236,220,.7);margin-top:.5rem}
+.tel{font:400 clamp(1.6rem,3vw,2.2rem)/1 var(--serif);color:var(--gold);text-decoration:none}
+.services{display:flex;flex-wrap:wrap;gap:.5rem}
+.services span{padding:.45em .9em;border-radius:999px;font:700 .78rem/1 var(--sans);background:rgba(246,236,220,.08);box-shadow:inset 0 0 0 1px rgba(246,236,220,.14)}
+@media (max-width:860px){.visit-grid{grid-template-columns:1fr}}
+@media (max-width:420px){.hours th{width:34%}.hours td span{display:block}}
+
+footer.site{background:#0f0b09;color:rgba(246,236,220,.6);padding:2.4rem 0 calc(2.4rem + 72px);font-size:.88rem}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+footer.site b{color:var(--cream);font:500 1.1rem/1 var(--serif)}
+@media (min-width:761px){footer.site{padding-bottom:2.4rem}}
+
+/* sticky mobile bar */
+.actbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:55;display:none;grid-template-columns:1fr 1fr;gap:8px;padding:8px;border-radius:999px;background:rgba(21,16,13,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 40px -12px rgba(0,0,0,.6);transform:translateY(140%);transition:transform .45s var(--ease)}
+.actbar.show{transform:none}
+.actbar .btn{padding:.9em .6em}
+@media (max-width:760px){.actbar{display:grid}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.bulb,.status.open i{animation:none}.layer{will-change:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#start">Zum Inhalt springen</a>
+<div class="demo" id="demo">Website-Entwurf · Konzept für die Gaststätte Zum Häring – noch nicht vom Betrieb veröffentlicht</div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#start" aria-label="Gaststätte Zum Häring – nach oben">
+      <img src="brand/mark.svg" alt="" width="40" height="40">
+      <span><b>Zum Häring</b><small>Gaststätte · Kaufbeuren</small></span>
+    </a>
+    <nav class="nav" aria-label="Hauptmenü">
+      <a href="#kueche">Küche</a>
+      <a href="#biergarten">Biergarten</a>
+      <a href="#feiern">Feiern</a>
+      <a href="#besuch">Öffnungszeiten</a>
+      <a class="btn btn-fire" href="tel:+4983412895"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>Tisch reservieren</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="start">
+<section class="hero" aria-label="Willkommen">
+  <div class="layer l-film" data-depth="0.35">
+    <video id="film" autoplay muted loop playsinline preload="auto" poster="media/hero-poster.jpg" aria-hidden="true" tabindex="-1"></video>
+    <script>(function(v){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+      var small=Math.min(screen.width,screen.height)*Math.min(devicePixelRatio||1,1.5)<=820||innerWidth<=820;
+      var webm=v.canPlayType('video/webm; codecs="vp9"');v.src='media/hero'+(small?'-720':'')+(webm?'.webm':'.mp4');})(document.getElementById('film'));</script>
+  </div>
+  <div class="wrap hero-copy layer" data-depth="-0.08">
+    <p class="status" id="status" aria-live="polite"><i></i><span>Öffnungszeiten: Di–So ab 11:30 Uhr</span></p>
+    <h1>Vom Grill.<br><em>Am Kemptener Tor.</em></h1>
+    <p class="lede">Ćevapčići, Grillteller, Schnitzel und Pizza – dazu das Salatbuffet und ein Biergarten direkt unter der Kaufbeurer Stadtmauer.</p>
+    <div class="cta">
+      <a class="btn btn-fire" href="tel:+4983412895"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>08341 2895 anrufen</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Gastst%C3%A4tte%20Zum%20H%C3%A4ring%2C%20Kemptener%20Tor%209%2C%2087600%20Kaufbeuren" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Route planen</a>
+    </div>
+    <div class="proof">
+      <span><b>4,7</b><span class="stars" aria-label="4,7 von 5 Sternen">★★★★★</span></span>
+      <span>über 1.300 Google-Bewertungen</span>
+      <span>Vor Ort · Zum Mitnehmen · Lieferung</span>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">Scrollen</div>
+</section>
+<div class="checker" aria-hidden="true"></div>
+
+<section class="intro" aria-labelledby="intro-h">
+  <div class="wrap intro-grid">
+    <div class="rv">
+      <span class="kicker">Gaststätte in Kaufbeuren</span>
+      <h2 id="intro-h">Große Portionen. <em>Herzliche</em> Gastgeber.</h2>
+      <p class="big">Kroatische Grillküche und deutsche Klassiker, mitten in der Altstadt – und genau so, wie Gäste es seit Jahren beschreiben: großzügig, lecker, gastfreundlich.</p>
+    </div>
+    <div class="facts rv d2" role="list">
+      <div role="listitem"><b>4,7 ★</b><span>Durchschnitt auf Google</span></div>
+      <div role="listitem"><b data-count="1300">1.300+</b><span>Bewertungen von Gästen</span></div>
+      <div role="listitem"><b>Di–So</b><span>Mittags &amp; abends geöffnet</span></div>
+      <div role="listitem"><b>3 ×</b><span>Essen vor Ort, Abholung, Lieferung</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dishes" id="kueche" aria-labelledby="kueche-h">
+  <div class="wrap">
+    <div class="dish-head">
+      <div class="rv"><span class="kicker">Aus der Küche</span><h2 id="kueche-h" style="margin-top:.35em">Was Gäste <em>lieben</em></h2></div>
+      <p class="rv d1">Die Klassiker, die in den Bewertungen immer wieder genannt werden – frisch zubereitet, reichlich serviert.</p>
+    </div>
+    <div class="menu">
+      <article class="card wide rv">
+        <svg class="art" viewBox="0 0 800 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="ga" cx="75%" cy="55%" r="60%"><stop offset="0" stop-color="#e2532a" stop-opacity=".55"/><stop offset="1" stop-color="#211915" stop-opacity="0"/></radialGradient></defs><rect width="800" height="340" fill="url(#ga)"/><g fill="none" stroke="#f0a83a" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"><path d="M470 120h300M470 160h300M470 200h300M470 240h300"/></g><g fill="#7a3b1f"><rect x="500" y="132" width="120" height="22" rx="11"/><rect x="530" y="172" width="120" height="22" rx="11"/><rect x="590" y="212" width="120" height="22" rx="11"/><rect x="640" y="138" width="100" height="22" rx="11"/></g><g stroke="#2a150b" stroke-width="3" stroke-opacity=".7"><path d="M520 136v14M560 136v14M600 136v14M550 176v14M590 176v14M630 176v14M610 216v14M650 216v14M690 216v14M660 142v14M700 142v14"/></g></svg>
+        <span class="num">01</span>
+        <h3>Ćevapčići &amp; Grillteller</h3>
+        <p>Vom Holzkohlegrill, nach kroatischer Art – ein Gast schreibt kurz und klar: „excellent chevapi“.</p>
+        <span class="badge">Beliebt auf der Mittagskarte</span>
+      </article>
+      <article class="card rv d1">
+        <svg class="art" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="gb" cx="70%" cy="35%" r="60%"><stop offset="0" stop-color="#5d6a34" stop-opacity=".6"/><stop offset="1" stop-color="#211915" stop-opacity="0"/></radialGradient></defs><rect width="400" height="340" fill="url(#gb)"/><g fill="none" stroke="#a9b56a" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"><path d="M220 110h150a75 75 0 0 1-150 0z"/><path d="M250 108c-6-30 14-46 34-40-2 22-16 34-34 40zM300 106c4-34 30-44 48-32-8 20-26 30-48 32zM282 104c-12-22-2-42 14-48 6 20 0 36-14 48z"/></g></svg>
+        <span class="num">02</span>
+        <h3>Salatbuffet</h3>
+        <p>„Salad is included“ – zu vielen Gerichten gibt es das Salatbuffet gleich dazu.</p>
+      </article>
+      <article class="card rv">
+        <svg class="art" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="gc" cx="75%" cy="30%" r="60%"><stop offset="0" stop-color="#f0a83a" stop-opacity=".45"/><stop offset="1" stop-color="#211915" stop-opacity="0"/></radialGradient></defs><rect width="400" height="340" fill="url(#gc)"/><path d="M230 70l130 20-20 90-130-30z" fill="#c9852f" fill-opacity=".55"/><path d="M240 84l108 16" stroke="#f6ecdc" stroke-opacity=".35" stroke-width="3"/></svg>
+        <span class="num">03</span>
+        <h3>Schnitzel</h3>
+        <p>Goldbraun und groß. In einer Bewertung schlicht: „The schnitzel was majestic“.</p>
+      </article>
+      <article class="card rv d1">
+        <svg class="art" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="gd" cx="70%" cy="35%" r="60%"><stop offset="0" stop-color="#e2532a" stop-opacity=".5"/><stop offset="1" stop-color="#211915" stop-opacity="0"/></radialGradient></defs><rect width="400" height="340" fill="url(#gd)"/><circle cx="295" cy="105" r="70" fill="none" stroke="#f0a83a" stroke-opacity=".55" stroke-width="3"/><g stroke="#f0a83a" stroke-opacity=".35" stroke-width="2"><path d="M295 35v140M225 105h140M245 55l100 100M345 55L245 155"/></g><g fill="#e2532a" fill-opacity=".75"><circle cx="268" cy="80" r="8"/><circle cx="318" cy="72" r="7"/><circle cx="338" cy="110" r="8"/><circle cx="312" cy="140" r="7"/><circle cx="262" cy="132" r="8"/><circle cx="250" cy="100" r="6"/><circle cx="292" cy="58" r="6"/><circle cx="285" cy="112" r="7"/><circle cx="322" cy="96" r="5"/><circle cx="276" cy="155" r="5"/></g></svg>
+        <span class="num">04</span>
+        <h3>Pizza Diavolo</h3>
+        <p>Scharf und beliebt: „Best pizza Diavolo (hot) ever.“</p>
+      </article>
+      <article class="card rv d2">
+        <svg class="art" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="ge" cx="75%" cy="35%" r="60%"><stop offset="0" stop-color="#1e5b78" stop-opacity=".6"/><stop offset="1" stop-color="#211915" stop-opacity="0"/></radialGradient></defs><rect width="400" height="340" fill="url(#ge)"/><path d="M250 110h110l-10 40h-90z" fill="none" stroke="#9cc3d6" stroke-opacity=".6" stroke-width="3"/><path d="M270 110v-30h70v30" fill="none" stroke="#9cc3d6" stroke-opacity=".6" stroke-width="3"/></svg>
+        <span class="num">05</span>
+        <h3>Zum Mitnehmen</h3>
+        <p>Anrufen, bestellen, abholen – oder liefern lassen.</p>
+        <a class="badge" href="tel:+4983412895" style="text-decoration:none">08341 2895</a>
+      </article>
+    </div>
+    <p class="menu-note">Die vollständige Speisekarte mit Tagesgerichten gibt es im Lokal. Fragen zu Gerichten oder Allergenen? Einfach <a href="tel:+4983412895">anrufen</a>.</p>
+  </div>
+</section>
+
+<section class="garden" id="biergarten" aria-labelledby="garden-h">
+  <div class="layer g-word" data-depth="0.45" aria-hidden="true">Biergarten</div>
+  <div class="layer g-lights" data-depth="0.25" aria-hidden="true">
+    <svg viewBox="0 0 1600 300" preserveAspectRatio="none" id="lights"></svg>
+  </div>
+  <div class="layer g-wall" data-depth="0.12" aria-hidden="true">
+    <svg viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax slice">
+      <defs><linearGradient id="wallg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b2c25"/><stop offset="1" stop-color="#1a120e"/></linearGradient></defs>
+      <path id="wallpath" fill="url(#wallg)"/>
+      <g fill="#ffcf7a" fill-opacity=".8"><path d="M1172 200v-26a8 8 0 0 1 16 0v26z"/></g>
+    </svg>
+  </div>
+  <div class="layer g-front" data-depth="-0.12" aria-hidden="true">
+    <svg viewBox="0 0 1600 300" preserveAspectRatio="xMidYMax slice"><g fill="#0d0907">
+      <path d="M0 300V140c40-60 90-80 140-40 30-70 110-90 160-30 40-40 100-30 120 30v200z"/>
+      <path d="M1250 300V120c30-70 110-90 150-30 40-50 120-40 150 20 20-10 40-6 50 4v186z"/>
+      <rect x="520" y="210" width="560" height="14" rx="4"/><rect x="560" y="224" width="12" height="76"/><rect x="1028" y="224" width="12" height="76"/>
+      <rect x="470" y="252" width="200" height="10" rx="3"/><rect x="930" y="252" width="200" height="10" rx="3"/>
+    </g></svg>
+  </div>
+  <div class="g-copy">
+    <div class="wrap">
+      <span class="kicker">Draußen sitzen</span>
+      <h2 id="garden-h">Biergarten <em>unter der Stadtmauer</em></h2>
+      <p>An warmen Tagen draußen essen, mit Blick auf die alte Mauer. Gäste beschreiben ihn als „park-like, quiet and pleasant“.</p>
+    </div>
+  </div>
+</section>
+<div class="checker" aria-hidden="true"></div>
+
+<section class="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="rev-head">
+      <div class="rv"><span class="kicker">Gästestimmen</span><h2 id="rev-h" style="margin-top:.35em">Was Gäste <em>sagen</em></h2></div>
+      <div class="score rv d1"><b>4,7</b><div class="stars" aria-hidden="true">★★★★★</div><span>aus über 1.300 Google-Bewertungen</span></div>
+    </div>
+    <div class="quotes">
+      <figure class="q feature rv">
+        <blockquote lang="en">To dine, or not to dine? That was the question. The answer, dear reader, is dine here. … The schnitzel was majestic, the portions were absolutely PERFECT … Verily, this establishment cooks.</blockquote>
+        <footer>Google-Rezension · 5 Sterne</footer>
+      </figure>
+      <figure class="q rv d1">
+        <blockquote lang="en">Excellent chevapi. Best pizza Diavolo (hot) ever. Large portions with enough leftovers for another meal.</blockquote>
+        <footer>Google-Rezension</footer>
+      </figure>
+      <figure class="q rv d2">
+        <blockquote lang="en">Really good place and delicious food. Amazing schnitzels and salad is included.</blockquote>
+        <footer>Google-Rezension</footer>
+      </figure>
+      <figure class="q rv d1">
+        <blockquote lang="en">Excellent service and very delicious food!</blockquote>
+        <footer>Google-Rezension</footer>
+      </figure>
+      <figure class="q rv d2">
+        <blockquote lang="en">Sat in the garden, so the atmosphere was park-like, quiet and pleasant.</blockquote>
+        <footer>Google-Rezension</footer>
+      </figure>
+    </div>
+    <p class="disclaimer">Auszüge aus Google-Rezensionen, wie sie Google anzeigt (teils automatisch übersetzt), gekürzt. <a href="https://www.google.com/maps/search/?api=1&amp;query=Gastst%C3%A4tte%20Zum%20H%C3%A4ring%20Kaufbeuren" target="_blank" rel="noopener">Alle Bewertungen ansehen</a></p>
+  </div>
+</section>
+
+<section class="feiern" id="feiern" aria-labelledby="feiern-h">
+  <div class="wrap feiern-grid">
+    <div class="rv">
+      <span class="kicker">Gemeinsam feiern</span>
+      <h2 id="feiern-h" style="margin:.35em 0 .4em">Platz für <em>Ihre</em> Runde</h2>
+      <p>Geburtstag, Firmenessen oder Vereinsabend: Rufen Sie an und besprechen Sie Termin, Personenzahl und Wünsche direkt mit dem Team.</p>
+      <div class="cta"><a class="btn btn-dark" href="tel:+4983412895">Feier anfragen · 08341 2895</a></div>
+    </div>
+    <div class="occasions">
+      <div class="occ rv d1"><svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="28" fill="#e2532a"/><path d="M18 38h20v-10H18zM22 28v-5m6 5v-5m6 5v-5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="22" cy="20" r="1.8" fill="#ffd58a"/><circle cx="28" cy="20" r="1.8" fill="#ffd58a"/><circle cx="34" cy="20" r="1.8" fill="#ffd58a"/></svg><div><b>Familienfeiern</b><span>Geburtstage, Taufen, Jubiläen</span></div></div>
+      <div class="occ rv d2"><svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="28" fill="#1e5b78"/><rect x="17" y="22" width="22" height="16" rx="2" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M23 22v-3h10v3" fill="none" stroke="#fff" stroke-width="2.4"/></svg><div><b>Firmenessen</b><span>Weihnachtsfeier, Team-Abend, Geschäftsessen</span></div></div>
+      <div class="occ rv d3"><svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="28" fill="#5d6a34"/><path d="M20 18h8l-2 20h-4zM30 18h8l-2 20h-4z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/></svg><div><b>Vereine &amp; Stammtische</b><span>Gemütlich zusammensitzen, drinnen oder im Biergarten</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="besuch" aria-labelledby="besuch-h">
+  <div class="wrap">
+    <span class="kicker">Besuch planen</span>
+    <h2 id="besuch-h" style="margin-top:.35em">Öffnungszeiten &amp; <em>Anfahrt</em></h2>
+    <div class="visit-grid">
+      <div class="panel rv">
+        <table class="hours" id="hours">
+          <caption class="kicker" style="text-align:left;margin-bottom:.8rem;color:var(--gold)">Öffnungszeiten</caption>
+          <tbody>
+            <tr data-d="1" class="closed"><th scope="row">Montag</th><td>Ruhetag</td></tr>
+            <tr data-d="2"><th scope="row">Dienstag</th><td><span>11:30–14:00</span><span>17:30–22:30</span></td></tr>
+            <tr data-d="3"><th scope="row">Mittwoch</th><td><span>11:30–14:00</span><span>17:30–22:30</span></td></tr>
+            <tr data-d="4"><th scope="row">Donnerstag</th><td><span>11:30–14:00</span><span>17:30–22:30</span></td></tr>
+            <tr data-d="5"><th scope="row">Freitag</th><td><span>11:30–14:00</span><span>17:30–22:30</span></td></tr>
+            <tr data-d="6"><th scope="row">Samstag</th><td><span>11:30–14:00</span><span>17:30–22:30</span></td></tr>
+            <tr data-d="0"><th scope="row">Sonntag</th><td><span>11:30–14:00</span><span>17:30–22:00</span></td></tr>
+          </tbody>
+        </table>
+        <p class="small">Laut Google-Eintrag. An Feiertagen können die Zeiten abweichen – im Zweifel kurz anrufen.</p>
+      </div>
+      <div class="panel mapcard rv d1">
+        <svg class="map" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="#f6ecdc" stroke-opacity=".08" stroke-width="2"><path d="M0 80h600M0 210h600M0 330h600M90 0v400M240 0v400M420 0v400M540 0v400"/></g>
+          <path d="M60 360C150 300 200 300 260 240S380 150 470 120" fill="none" stroke="#f0a83a" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round" id="route"/>
+          <circle cx="470" cy="120" r="14" fill="#e2532a"/><circle cx="470" cy="120" r="30" fill="#e2532a" fill-opacity=".2"/>
+        </svg>
+        <div>
+          <span class="kicker" style="color:var(--gold)">Adresse</span>
+          <p class="addr" style="margin-top:.6rem">Kemptener Tor 9<small>87600 Kaufbeuren · Altstadt, an der Stadtmauer</small></p>
+        </div>
+        <div>
+          <a class="tel" href="tel:+4983412895">08341 2895</a>
+          <div class="services" style="margin-top:1.1rem"><span>Vor Ort essen</span><span>Zum Mitnehmen</span><span>Lieferung</span></div>
+          <div class="cta"><a class="btn btn-fire" href="https://www.google.com/maps/dir/?api=1&amp;destination=Gastst%C3%A4tte%20Zum%20H%C3%A4ring%2C%20Kemptener%20Tor%209%2C%2087600%20Kaufbeuren" target="_blank" rel="noopener">Route starten</a><a class="btn btn-ghost" href="tel:+4983412895">Anrufen</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div><b>Gaststätte Zum Häring</b><br>Kemptener Tor 9 · 87600 Kaufbeuren · <a href="tel:+4983412895">08341 2895</a></div>
+    <div>© <span id="yr">2026</span> · Impressum · Datenschutz</div>
+  </div>
+</footer>
+
+<nav class="actbar" id="actbar" aria-label="Schnellzugriff">
+  <a class="btn btn-fire" href="tel:+4983412895">Anrufen</a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Gastst%C3%A4tte%20Zum%20H%C3%A4ring%2C%20Kemptener%20Tor%209%2C%2087600%20Kaufbeuren" target="_blank" rel="noopener">Route</a>
+</nav>
+
+<script>
+(() => {
+  const rm = matchMedia('(prefers-reduced-motion: reduce)');
+  const header = document.getElementById('top'), bar = document.getElementById('actbar'), film = document.getElementById('film');
+  const demo = document.getElementById('demo');
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // header sits below the demo strip until scrolled
+  const setDemo = () => document.documentElement.style.setProperty('--demo-h', (demo ? demo.offsetHeight : 0) + 'px');
+  setDemo(); addEventListener('resize', setDemo);
+
+  // City wall silhouette with a gate tower (Kemptener Tor nod)
+  (function(){ let d='M0 500V250'; let x=0; const top=250;
+    while (x < 1080) { d+=`H${x+40}V${top-26}H${x+70}V${top}`; x+=70; }
+    d+=`H1100V140L1180 70L1260 140V250`;
+    x=1260; while (x < 1600) { d+=`H${x+40}V${top-26}H${x+70}V${top}`; x+=70; }
+    d+='H1600V500Z'; d+='M1150 500V330a30 30 0 0 1 60 0V500Z';
+    const p=document.getElementById('wallpath'); p.setAttribute('d',d); p.setAttribute('fill-rule','evenodd'); })();
+
+  // String lights: catenaries with bulbs
+  (function(){ const svg=document.getElementById('lights'); const ns='http://www.w3.org/2000/svg';
+    const spans=[[0,40,520,70,150],[520,70,1080,30,170],[1080,30,1600,80,140]];
+    let html=''; spans.forEach(([x1,y1,x2,y2,sag],s)=>{ const cx=(x1+x2)/2, cy=Math.max(y1,y2)+sag;
+      html+=`<path d="M${x1} ${y1}Q${cx} ${cy} ${x2} ${y2}" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="2" vector-effect="non-scaling-stroke"/>`;
+      for(let i=1;i<14;i++){const t=i/14, x=(1-t)*(1-t)*x1+2*(1-t)*t*cx+t*t*x2, y=(1-t)*(1-t)*y1+2*(1-t)*t*cy+t*t*y2;
+        html+=`<circle class="bulb" cx="${x.toFixed(1)}" cy="${(y+9).toFixed(1)}" r="6" style="animation-delay:${((i*7+s*3)%11)*.37}s"/>`;}});
+    svg.innerHTML=html; })();
+
+  // Live open/closed status from the Google hours
+  (function(){ const H={0:[[690,840],[1050,1320]],1:[],2:[[690,840],[1050,1350]],3:[[690,840],[1050,1350]],4:[[690,840],[1050,1350]],5:[[690,840],[1050,1350]],6:[[690,840],[1050,1350]]};
+    const el=document.getElementById('status'); const fmt=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+    const DN=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+    function now(){ const p=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Berlin',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+      const wd=['So','Mo','Di','Mi','Do','Fr','Sa'].indexOf(p.find(x=>x.type==='weekday').value.replace('.','')); const h=+p.find(x=>x.type==='hour').value%24, m=+p.find(x=>x.type==='minute').value; return {d:wd,m:h*60+m}; }
+    function upd(){ const {d,m}=now(); let txt, cls='';
+      const today=H[d]||[]; const cur=today.find(([a,b])=>m>=a&&m<b);
+      if(cur){ txt=`Jetzt geöffnet · bis ${fmt(cur[1])} Uhr`; cls='open'; }
+      else { const next=today.find(([a])=>a>m);
+        if(next){ txt=`Heute wieder ab ${fmt(next[0])} Uhr geöffnet`; cls='soon'; }
+        else { for(let k=1;k<=7;k++){ const dd=(d+k)%7; if((H[dd]||[]).length){ txt=`Geschlossen · ${k===1?'morgen':DN[dd]} ab ${fmt(H[dd][0][0])} Uhr`; break; } } } }
+      el.className='status '+cls; el.querySelector('span').textContent=txt;
+      document.querySelectorAll('#hours tr').forEach(tr=>tr.classList.toggle('today',+tr.dataset.d===d)); }
+    try{ upd(); setInterval(upd,60000); }catch(e){} })();
+
+  // reveals
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // Transform-only parallax, rAF-throttled, only for sections near the viewport
+  const layers = [...document.querySelectorAll('[data-depth]')].map(el => ({ el, d: +el.dataset.depth, host: el.closest('section') }));
+  const near = new Set();
+  const vio = new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? near.add(e.target) : near.delete(e.target)), { rootMargin: '25% 0px' });
+  new Set(layers.map(l => l.host)).forEach(h => vio.observe(h));
+  let queued = false;
+  function frame() {
+    queued = false;
+    const vh = innerHeight, y = scrollY;
+    header.classList.toggle('solid', y > 40);
+    bar.classList.toggle('show', y > vh * 0.55);
+    if (rm.matches) return;
+    for (const l of layers) {
+      if (!near.has(l.host)) continue;
+      const r = l.host.getBoundingClientRect();
+      const off = r.top + r.height / 2 - vh / 2;
+      l.el.style.transform = `translate3d(0,${(-off * l.d).toFixed(1)}px,0)`;
+    }
+  }
+  const req = () => { if (!queued) { queued = true; requestAnimationFrame(frame); } };
+  addEventListener('scroll', req, { passive: true }); addEventListener('resize', req);
+  rm.addEventListener?.('change', () => { layers.forEach(l => l.el.style.transform = ''); syncFilm(); req(); });
+  requestAnimationFrame(frame);
+
+  function syncFilm() { if (!film) return; if (rm.matches) { film.pause(); return; } film.muted = true; film.play()?.catch(() => {}); }
+  syncFilm();
+  new IntersectionObserver(([e]) => { if (rm.matches) return; e.isIntersecting ? film.play().catch(() => {}) : film.pause(); }).observe(film);
+})();
+</script>
+</body>
+</html>
